@@ -1942,22 +1942,25 @@
       counterObserver.observe(counter);
     }
 
-    contactForm.addEventListener("submit", (event) => {
-      event.preventDefault();
+   contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-      const nome = document.getElementById("nome").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const servico = document.getElementById("servico").value.trim();
-      const mensagem = document.getElementById("mensagem").value.trim();
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const servico = document.getElementById("servico").value.trim();
+  const mensagem = document.getElementById("mensagem").value.trim();
 
-      const texto = `Olá, sou ${nome}.%0AEmail: ${email}%0AProjeto: ${servico}%0AMensagem: ${mensagem}`;
-      const whatsapp = `https://wa.me/11913432325?text=${texto}`;
+  const texto = encodeURIComponent(
+    `Olá, sou ${nome}.\nEmail: ${email}\nProjeto: ${servico}\nMensagem: ${mensagem}`
+  );
 
-      alert("Mensagem pronta! Troque o número do WhatsApp no código para receber contatos reais.");
-      window.open(whatsapp, "_blank");
+  const whatsapp = `https://wa.me/5511913432325?text=${texto}`;
 
-      contactForm.reset();
-    });
+  window.open(whatsapp, "_blank");
+
+  contactForm.reset();
+});
+    ;
   </script>
 </body>
 </html>
