@@ -2274,6 +2274,80 @@
       z-index: 2;
     }
 
+
+    /* ========= CORREÇÃO MOBILE: ÍCONE SANDUÍCHE ALINHADO ========= */
+    @media (max-width: 920px) {
+      .navbar.nav-pro {
+        display: grid !important;
+        grid-template-columns: auto 1fr auto auto !important;
+        align-items: center !important;
+      }
+
+      .menu-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        justify-self: end !important;
+        grid-column: 4 !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+        font-size: 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+
+      .menu-btn::before,
+      .menu-btn::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        width: 18px !important;
+        height: 2px !important;
+        border-radius: 999px !important;
+        background: var(--preto) !important;
+        transition: transform .25s ease, box-shadow .25s ease !important;
+      }
+
+      .menu-btn::before {
+        transform: translate(-50%, calc(-50% - 6px)) !important;
+        box-shadow: 0 6px 0 var(--preto) !important;
+      }
+
+      .menu-btn::after {
+        transform: translate(-50%, calc(-50% + 6px)) !important;
+      }
+
+      .menu-btn.is-open::before {
+        transform: translate(-50%, -50%) rotate(45deg) !important;
+        box-shadow: 0 0 0 transparent !important;
+      }
+
+      .menu-btn.is-open::after {
+        transform: translate(-50%, -50%) rotate(-45deg) !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .navbar.nav-pro {
+        grid-template-columns: auto 1fr auto !important;
+        padding: 0 12px 0 16px !important;
+      }
+
+      .nav-cta {
+        display: none !important;
+      }
+
+      .menu-btn {
+        grid-column: 3 !important;
+        margin-left: auto !important;
+      }
+    }
+
 </style>
 </head>
 
@@ -2300,7 +2374,7 @@
         </div>
 
         <a href="#contato" class="nav-cta magnetic"><span>Iniciar projeto</span><b>→</b></a>
-        <button class="menu-btn magnetic" id="menuBtn" aria-label="Abrir menu">☰</button>
+        <button class="menu-btn magnetic" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
       </nav>
     </header>
 
@@ -2764,12 +2838,17 @@
 
     menuBtn.addEventListener("click", () => {
       navLinks.classList.toggle("active");
-      menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
+      const menuAberto = navLinks.classList.contains("active");
+      menuBtn.classList.toggle("is-open", menuAberto);
+      menuBtn.setAttribute("aria-expanded", menuAberto ? "true" : "false");
+      menuBtn.textContent = menuAberto ? "×" : "☰";
     });
 
     document.querySelectorAll(".nav-links a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
+        menuBtn.classList.remove("is-open");
+        menuBtn.setAttribute("aria-expanded", "false");
         menuBtn.textContent = "☰";
       });
     });
@@ -2901,7 +2980,11 @@ Mensagem: ${mensagem}`
       });
 
       if (navLinks) navLinks.classList.remove("active");
-      if (menuBtn) menuBtn.textContent = "☰";
+      if (menuBtn) {
+        menuBtn.classList.remove("is-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      }
 
       navItems.forEach((item) => item.classList.remove("active"));
       link.classList.add("active");
