@@ -3651,6 +3651,367 @@
       }
     }
 
+
+
+    /* ========= AJUSTE FINAL MOBILE: MENU LATERAL DIREITO + PERFIL VERDE ========= */
+    @media (max-width: 920px) {
+      .navbar.nav-pro {
+        grid-template-columns: auto 1fr auto auto !important;
+        align-items: center !important;
+      }
+
+      .nav-pro .nav-links,
+      .navbar.nav-pro .nav-links {
+        position: absolute !important;
+        top: 78px !important;
+        left: auto !important;
+        right: 10px !important;
+        width: min(246px, calc(100vw - 44px)) !important;
+        max-width: 246px !important;
+        display: grid !important;
+        gap: 7px !important;
+        padding: 16px !important;
+        border-radius: 28px !important;
+        background:
+          radial-gradient(circle at 88% 8%, rgba(121, 153, 119, 0.16), transparent 36%),
+          rgba(10, 10, 9, 0.98) !important;
+        border: 1px solid rgba(217, 216, 198, 0.18) !important;
+        box-shadow: 0 26px 72px rgba(0, 0, 0, 0.52) !important;
+        transform: translate(18px, -12px) scale(0.96) !important;
+        transform-origin: top right !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: opacity .24s ease, transform .24s var(--ease) !important;
+        z-index: 60 !important;
+      }
+
+      .nav-pro .nav-links.active,
+      .navbar.nav-pro .nav-links.active {
+        transform: translate(0, 0) scale(1) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-pro .nav-links a,
+      .navbar.nav-pro .nav-links a {
+        width: 100% !important;
+        min-height: 46px !important;
+        justify-content: flex-start !important;
+        padding: 0 17px !important;
+        border-radius: 18px !important;
+        color: rgba(217, 216, 198, 0.78) !important;
+      }
+
+      .nav-pro .nav-links a:hover,
+      .nav-pro .nav-links a.active,
+      .navbar.nav-pro .nav-links a:hover,
+      .navbar.nav-pro .nav-links a.active {
+        color: var(--preto) !important;
+        background: var(--verde-claro) !important;
+        border-color: rgba(121, 153, 119, 0.46) !important;
+        transform: translateX(-3px) !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .auth-nav-btn {
+        width: 46px !important;
+        min-width: 46px !important;
+        height: 46px !important;
+        min-height: 46px !important;
+        padding: 0 !important;
+        margin: 0 8px 0 auto !important;
+        font-size: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(121, 153, 119, 0.14) !important;
+        border-color: rgba(121, 153, 119, 0.42) !important;
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.06),
+          0 0 0 1px rgba(121, 153, 119, 0.04) !important;
+      }
+
+      .auth-nav-btn::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        border-radius: inherit !important;
+        background: radial-gradient(circle, rgba(121, 153, 119, 0.28), rgba(121, 153, 119, 0.08) 58%, transparent 72%) !important;
+        transform: none !important;
+        z-index: -1 !important;
+      }
+
+      .auth-nav-btn::after {
+        content: "" !important;
+        width: 24px !important;
+        height: 24px !important;
+        display: block !important;
+        position: relative !important;
+        border-radius: 999px !important;
+        background:
+          radial-gradient(circle at 50% 31%, var(--verde-claro) 0 5px, transparent 5.8px),
+          radial-gradient(ellipse at 50% 78%, var(--verde-claro) 0 10px, transparent 10.8px) !important;
+        filter: drop-shadow(0 0 10px rgba(121, 153, 119, 0.55)) !important;
+      }
+
+      .auth-nav-btn:hover {
+        background: var(--verde-claro) !important;
+        transform: translateY(-1px) !important;
+      }
+
+      .auth-nav-btn:hover::after {
+        background:
+          radial-gradient(circle at 50% 31%, var(--preto) 0 5px, transparent 5.8px),
+          radial-gradient(ellipse at 50% 78%, var(--preto) 0 10px, transparent 10.8px) !important;
+        filter: none !important;
+      }
+
+      .menu-btn {
+        margin-left: 0 !important;
+      }
+    }
+
+
+    /* ========= REFINO MOBILE: NAVBAR NA IDENTIDADE + PERFIL CLARO ========= */
+    @media (max-width: 920px) {
+      .navbar.nav-pro {
+        grid-template-columns: auto 1fr auto auto !important;
+        gap: 10px !important;
+        padding: 0 12px 0 18px !important;
+        height: 68px !important;
+        background:
+          radial-gradient(circle at 12% 50%, rgba(121, 153, 119, 0.15), transparent 30%),
+          linear-gradient(180deg, rgba(26, 26, 26, 0.94), rgba(13, 14, 13, 0.9)) !important;
+        border: 1px solid rgba(217, 216, 198, 0.18) !important;
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.42),
+          inset 0 1px 0 rgba(255,255,255,0.05) !important;
+        overflow: visible !important;
+      }
+
+      .nav-pro .brand {
+        width: 150px !important;
+        min-width: 150px !important;
+      }
+
+      .nav-pro .brand::after {
+        display: none !important;
+      }
+
+      .nav-pro .brand-logo {
+        width: 148px !important;
+        max-height: 42px !important;
+      }
+
+      .nav-pro .nav-links,
+      .navbar.nav-pro .nav-links {
+        position: absolute !important;
+        top: calc(100% + 14px) !important;
+        right: 0 !important;
+        left: auto !important;
+        width: min(270px, calc(100vw - 44px)) !important;
+        max-width: 270px !important;
+        display: grid !important;
+        gap: 8px !important;
+        padding: 16px !important;
+        border-radius: 28px 10px 28px 28px !important;
+        background:
+          radial-gradient(circle at 92% 0%, rgba(121, 153, 119, 0.22), transparent 35%),
+          linear-gradient(145deg, rgba(31, 51, 19, 0.72), rgba(13, 14, 13, 0.98) 46%, rgba(10, 10, 9, 0.98)) !important;
+        border: 1px solid rgba(121, 153, 119, 0.28) !important;
+        box-shadow:
+          0 26px 76px rgba(0, 0, 0, 0.56),
+          inset 0 1px 0 rgba(255,255,255,0.045) !important;
+        backdrop-filter: blur(18px) !important;
+        transform: translateX(18px) translateY(-10px) scale(0.98) !important;
+        transform-origin: top right !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: opacity .24s ease, transform .26s var(--ease) !important;
+        z-index: 80 !important;
+      }
+
+      .nav-pro .nav-links::before,
+      .navbar.nav-pro .nav-links::before {
+        content: "menu" !important;
+        display: inline-flex !important;
+        width: fit-content !important;
+        margin: 0 0 4px 2px !important;
+        padding: 7px 11px !important;
+        border-radius: 999px !important;
+        background: rgba(121, 153, 119, 0.12) !important;
+        border: 1px solid rgba(121, 153, 119, 0.28) !important;
+        color: var(--verde-claro) !important;
+        font-size: .68rem !important;
+        font-weight: 950 !important;
+        letter-spacing: .16em !important;
+        text-transform: uppercase !important;
+      }
+
+      .nav-pro .nav-links.active,
+      .navbar.nav-pro .nav-links.active {
+        transform: translateX(0) translateY(0) scale(1) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-pro .nav-links a,
+      .navbar.nav-pro .nav-links a {
+        min-height: 48px !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+        justify-content: flex-start !important;
+        border-radius: 18px !important;
+        color: rgba(217, 216, 198, 0.82) !important;
+        background: rgba(217, 216, 198, 0.035) !important;
+        border: 1px solid rgba(217, 216, 198, 0.08) !important;
+        font-weight: 900 !important;
+      }
+
+      .nav-pro .nav-links a::before,
+      .navbar.nav-pro .nav-links a::before {
+        left: 14px !important;
+        right: auto !important;
+        bottom: 8px !important;
+        width: 34px !important;
+        background: var(--verde-claro) !important;
+      }
+
+      .nav-pro .nav-links a:hover,
+      .nav-pro .nav-links a.active,
+      .navbar.nav-pro .nav-links a:hover,
+      .navbar.nav-pro .nav-links a.active {
+        color: var(--preto) !important;
+        background: linear-gradient(135deg, var(--creme), var(--verde-claro)) !important;
+        border-color: rgba(217, 216, 198, 0.25) !important;
+        transform: translateX(-4px) !important;
+        box-shadow: 0 12px 28px rgba(121,153,119,.16) !important;
+      }
+
+      .auth-nav-btn,
+      .menu-btn {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 999px !important;
+        background:
+          radial-gradient(circle at 50% 20%, rgba(121,153,119,.22), transparent 48%),
+          rgba(18, 19, 17, 0.86) !important;
+        border: 1px solid rgba(121, 153, 119, 0.42) !important;
+        box-shadow:
+          inset 0 1px 0 rgba(255,255,255,.06),
+          0 10px 28px rgba(0,0,0,.28) !important;
+        color: var(--creme) !important;
+        display: inline-grid !important;
+        place-items: center !important;
+        justify-self: end !important;
+        align-self: center !important;
+      }
+
+      .auth-nav-btn {
+        font-size: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .auth-nav-btn::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        border-radius: inherit !important;
+        background: linear-gradient(135deg, rgba(121,153,119,.18), rgba(217,216,198,.04)) !important;
+        transform: none !important;
+        z-index: -1 !important;
+      }
+
+      .auth-nav-btn::after {
+        content: "" !important;
+        width: 27px !important;
+        height: 27px !important;
+        position: relative !important;
+        display: block !important;
+        background: url("data:image/svg+xml,%3Csvg%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20stroke='%23799977'%20stroke-width='2.1'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Ccircle%20cx='12'%20cy='8'%20r='3.5'/%3E%3Cpath%20d='M4.8%2020c.9-4.1%203.5-6.2%207.2-6.2s6.3%202.1%207.2%206.2'/%3E%3C/svg%3E") center / contain no-repeat !important;
+        filter: drop-shadow(0 0 9px rgba(121,153,119,.55)) !important;
+      }
+
+      .auth-nav-btn:hover,
+      .menu-btn:hover {
+        background: var(--verde-claro) !important;
+        color: var(--preto) !important;
+        transform: translateY(-1px) !important;
+      }
+
+      .auth-nav-btn:hover::after {
+        background-image: url("data:image/svg+xml,%3Csvg%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20stroke='%231a1a1a'%20stroke-width='2.1'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Ccircle%20cx='12'%20cy='8'%20r='3.5'/%3E%3Cpath%20d='M4.8%2020c.9-4.1%203.5-6.2%207.2-6.2s6.3%202.1%207.2%206.2'/%3E%3C/svg%3E") !important;
+        filter: none !important;
+      }
+
+      .menu-btn {
+        position: relative !important;
+        font-size: 0 !important;
+        line-height: 1 !important;
+      }
+
+      .menu-btn::before,
+      .menu-btn::after {
+        background: var(--verde-claro) !important;
+        width: 18px !important;
+        height: 2px !important;
+        left: 50% !important;
+        top: 50% !important;
+        border-radius: 999px !important;
+      }
+
+      .menu-btn::before {
+        transform: translate(-50%, calc(-50% - 6px)) !important;
+        box-shadow: 0 6px 0 var(--verde-claro) !important;
+      }
+
+      .menu-btn::after {
+        transform: translate(-50%, calc(-50% + 6px)) !important;
+      }
+
+      .menu-btn.is-open::before {
+        transform: translate(-50%, -50%) rotate(45deg) !important;
+        box-shadow: 0 0 0 transparent !important;
+      }
+
+      .menu-btn.is-open::after {
+        transform: translate(-50%, -50%) rotate(-45deg) !important;
+      }
+
+      .menu-btn:hover::before,
+      .menu-btn:hover::after {
+        background: var(--preto) !important;
+      }
+
+      .menu-btn:hover::before {
+        box-shadow: 0 6px 0 var(--preto) !important;
+      }
+
+      .menu-btn.is-open:hover::before {
+        box-shadow: 0 0 0 transparent !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .navbar.nav-pro {
+        width: min(100% - 24px, 1160px) !important;
+      }
+
+      .nav-pro .brand {
+        width: 138px !important;
+        min-width: 138px !important;
+      }
+
+      .nav-pro .brand-logo {
+        width: 136px !important;
+      }
+    }
+
 </style>
 </head>
 
@@ -4200,7 +4561,7 @@
               <a class="btn btn-primary magnetic" href="https://wa.me/5511913432325" target="_blank" rel="noopener">
                 Chamar no WhatsApp <span>→</span>
               </a>
-              <a class="btn btn-secondary magnetic" href="mailto:kiwidesignweb@gmail.com">
+              <a class="btn btn-secondary magnetic" href="mailto:lukinhasplay.1010@gmail.com">
                 Enviar e-mail
               </a>
             </div>
@@ -4422,7 +4783,7 @@
 
     const contatoConfig = {
       whatsapp: "5511913432325",
-      email: "kiwidesignweb@gmail.com"
+      email: "lukinhasplay.1010@gmail.com"
     };
 
 
