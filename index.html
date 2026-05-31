@@ -2255,6 +2255,262 @@
       }
     }
 
+
+    /* ===============================
+       IMAGENS MAIS FLUIDAS E LEVES
+       Remove filtros pesados e prepara a imagem antes dela aparecer.
+       =============================== */
+
+    .gallery-item,
+    .about-photo,
+    .hero-logo-card {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      contain: paint;
+      overflow: hidden;
+    }
+
+    .gallery-item img,
+    .about-photo img,
+    .hero-logo-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: none !important;
+      backface-visibility: hidden;
+      transform: translate3d(0, 0, 0) scale(1.01);
+      transition:
+        transform 760ms cubic-bezier(.16, .84, .24, 1),
+        opacity 420ms ease;
+      will-change: transform, opacity;
+    }
+
+    .hero-logo-card img {
+      width: 78%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    body.images-enhanced .gallery-item img,
+    body.images-enhanced .about-photo img {
+      opacity: 0;
+      transform: translate3d(0, 14px, 0) scale(1.025);
+    }
+
+    body.images-enhanced .gallery-item.image-ready img,
+    body.images-enhanced .about-photo.image-ready img,
+    body.images-enhanced .gallery-item.visible img,
+    body.images-enhanced .about-photo.visible img {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1.01);
+    }
+
+    .gallery-item:hover img {
+      transform: translate3d(0, 0, 0) scale(1.045) !important;
+    }
+
+    .about-photo:hover img {
+      transform: translate3d(0, 0, 0) scale(1.035) !important;
+    }
+
+    .gallery-item:hover,
+    .about-photo:hover {
+      transform: translate3d(0, -4px, 0);
+      transition: transform 320ms cubic-bezier(.16, .84, .24, 1), border-color 320ms ease;
+    }
+
+    .gallery-item::after,
+    .about-photo::before,
+    .hero-logo-card::before {
+      display: none !important;
+      content: none !important;
+      animation: none !important;
+    }
+
+    .gallery-item::before {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.1) 58%, transparent 100%) !important;
+      transform: none !important;
+      transition: opacity 320ms ease;
+    }
+
+    .gallery-caption {
+      transform: translate3d(0, 14px, 0);
+      transition: transform 360ms cubic-bezier(.16, .84, .24, 1), opacity 280ms ease;
+      will-change: transform, opacity;
+    }
+
+    .gallery-caption p {
+      transform: translate3d(0, 6px, 0);
+      transition: opacity 280ms ease, transform 320ms cubic-bezier(.16, .84, .24, 1);
+    }
+
+    .gallery-item:hover .gallery-caption {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    .gallery-item:hover .gallery-caption p {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media (hover: none) {
+      .gallery-item:hover,
+      .about-photo:hover {
+        transform: none !important;
+      }
+
+      .gallery-item:hover img,
+      .about-photo:hover img {
+        transform: translate3d(0, 0, 0) scale(1.01) !important;
+      }
+
+      .gallery-caption {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .gallery-caption p {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-item img,
+      .about-photo img,
+      .hero-logo-card img,
+      .gallery-caption,
+      .gallery-caption p {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+  
+
+    /* ===============================
+       MODO FLUIDO REAL PARA IMAGENS
+       Anima o card, não a decodificação da imagem.
+       =============================== */
+
+    .section {
+      content-visibility: visible !important;
+      contain-intrinsic-size: auto !important;
+    }
+
+    .particle-field {
+      display: none !important;
+    }
+
+    .gallery-item,
+    .about-photo,
+    .hero-logo-card {
+      overflow: hidden;
+      contain: paint;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+    }
+
+    .gallery-item img,
+    .about-photo img,
+    .hero-logo-card img {
+      opacity: 1 !important;
+      display: block;
+      filter: none !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+      transition: transform 620ms cubic-bezier(.16, .84, .24, 1) !important;
+      backface-visibility: hidden;
+      will-change: auto !important;
+    }
+
+    .gallery-item.reveal,
+    .about-photo.reveal {
+      opacity: 0 !important;
+      transform: translate3d(0, 34px, 0) scale(.985) !important;
+      transition:
+        opacity 760ms ease,
+        transform 860ms cubic-bezier(.16, .84, .24, 1),
+        border-color 260ms ease !important;
+      will-change: opacity, transform;
+    }
+
+    .gallery-item.reveal.visible,
+    .about-photo.reveal.visible {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+    }
+
+    .gallery-caption {
+      opacity: 0;
+      transform: translate3d(0, 18px, 0) !important;
+      transition:
+        opacity 520ms ease 140ms,
+        transform 620ms cubic-bezier(.16, .84, .24, 1) 140ms !important;
+      will-change: opacity, transform;
+    }
+
+    .gallery-item.visible .gallery-caption {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    .gallery-caption p {
+      opacity: .86 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    .gallery-item:hover img,
+    .about-photo:hover img {
+      transform: translate3d(0, 0, 0) scale(1.025) !important;
+    }
+
+    .gallery-item:hover,
+    .about-photo:hover {
+      transform: translate3d(0, -5px, 0) scale(1) !important;
+    }
+
+    .gallery-item::after,
+    .about-photo::before,
+    .hero-logo-card::before {
+      display: none !important;
+      content: none !important;
+    }
+
+    .gallery-item::before {
+      opacity: .9 !important;
+      transform: none !important;
+      transition: opacity 260ms ease !important;
+    }
+
+    body.image-motion-ready .gallery-item img,
+    body.image-motion-ready .about-photo img {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+    }
+
+    @media (hover: none) {
+      .gallery-item:hover,
+      .about-photo:hover,
+      .gallery-item:hover img,
+      .about-photo:hover img {
+        transform: translate3d(0, 0, 0) scale(1) !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-item.reveal,
+      .about-photo.reveal,
+      .gallery-caption,
+      .gallery-item img,
+      .about-photo img {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2826,7 +3082,7 @@
               entry.target.classList.add("visible");
               observer.unobserve(entry.target);
             });
-          }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" })
+          }, { threshold: 0.18, rootMargin: "0px 0px -80px 0px" })
         : null;
 
       document.querySelectorAll(".reveal").forEach((element) => {
@@ -2897,6 +3153,38 @@
           particleField.appendChild(fragment);
         });
       }
+
+      /* Imagens ultra fluidas: não escondem a imagem; carregam/decodificam em repouso para não travar no scroll. */
+      body.classList.add("image-motion-ready");
+
+      const visualImages = document.querySelectorAll(".gallery-item img, .about-photo img, .hero-logo-card img");
+
+      const prepareVisualImage = (img) => {
+        img.decoding = "async";
+        img.loading = "eager";
+        img.fetchPriority = img.closest(".hero-logo-card") ? "high" : "low";
+
+        const wrapper = img.closest(".gallery-item, .about-photo, .hero-logo-card");
+        const markReady = () => wrapper?.classList.add("image-ready");
+
+        if (img.complete && img.naturalWidth > 0) {
+          if (img.decode) img.decode().catch(() => {}).finally(markReady);
+          else markReady();
+          return;
+        }
+
+        img.addEventListener("load", markReady, { once: true });
+        img.addEventListener("error", markReady, { once: true });
+      };
+
+      const warmUpImages = () => visualImages.forEach(prepareVisualImage);
+
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(warmUpImages, { timeout: 1200 });
+      } else {
+        setTimeout(warmUpImages, 350);
+      }
+
       /* Cubo 3D decorativo: sem arrastar, sem botões e sem listeners pesados. */
       const decorativeCube = document.querySelector(".cube-section .cube");
       if (decorativeCube && reduceMotion) {
