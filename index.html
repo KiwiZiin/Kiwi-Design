@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -4012,6 +4013,3142 @@
       }
     }
 
+
+    /* =========================================================
+       KIWI DESIGN — UPGRADE VISUAL FINAL
+       Grid editorial + hierarquia tipográfica + flat premium
+       Mantém todo o HTML, imagens, JS e funcionalidades originais.
+       ========================================================= */
+
+    :root {
+      --kiwi-max: 1220px;
+      --kiwi-gutter: clamp(18px, 4vw, 48px);
+      --kiwi-section: clamp(88px, 12vw, 148px);
+      --kiwi-radius-sm: 16px;
+      --kiwi-radius-md: 24px;
+      --kiwi-radius-lg: 34px;
+      --kiwi-radius-xl: 48px;
+      --kiwi-line: rgba(217, 216, 198, 0.16);
+      --kiwi-line-strong: rgba(217, 216, 198, 0.28);
+      --kiwi-cream-soft: rgba(217, 216, 198, 0.085);
+      --kiwi-green-soft: rgba(121, 153, 119, 0.16);
+      --kiwi-shadow-card: 0 28px 80px rgba(0, 0, 0, 0.34);
+      --kiwi-shadow-hard: 10px 10px 0 rgba(0, 0, 0, 0.34);
+    }
+
+    html {
+      scroll-padding-top: 112px !important;
+    }
+
+    body {
+      background: var(--preto) !important;
+      color: var(--creme) !important;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(217, 216, 198, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(217, 216, 198, 0.028) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.95), rgba(0,0,0,.72) 55%, transparent 100%);
+    }
+
+    .page {
+      isolation: isolate;
+    }
+
+    .container,
+    .navbar.nav-pro {
+      width: min(var(--kiwi-max), calc(100% - var(--kiwi-gutter))) !important;
+    }
+
+    h1,
+    .section-title,
+    .cube-copy h2,
+    .contact-copy h2,
+    .client-head h2,
+    .auth-copy h2,
+    .feedback-title {
+      font-family: "Neulis Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important;
+      font-weight: 950 !important;
+      letter-spacing: -0.065em !important;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 900px !important;
+      font-size: clamp(3.5rem, 9.3vw, 9.7rem) !important;
+      line-height: .84 !important;
+    }
+
+    .section-title,
+    .client-head h2 {
+      font-size: clamp(2.6rem, 5.8vw, 6.4rem) !important;
+      line-height: .9 !important;
+      max-width: 820px !important;
+    }
+
+    .section-desc,
+    .hero p,
+    .cube-copy p,
+    .contact-copy p,
+    .client-head p,
+    .about-card p,
+    .flip-front p,
+    .flip-back p,
+    .testimonial p,
+    .client-card p {
+      font-size: clamp(.98rem, 1.05vw, 1.08rem) !important;
+      line-height: 1.72 !important;
+    }
+
+    .section-tag,
+    .client-tag,
+    .feedback-kicker,
+    .contact-eyebrow,
+    .eyebrow {
+      letter-spacing: .16em !important;
+      text-transform: uppercase !important;
+      font-size: .72rem !important;
+      font-weight: 950 !important;
+    }
+
+    .progress-bar {
+      height: 4px !important;
+      background: var(--verde-claro) !important;
+      box-shadow: 0 0 0 1px rgba(121,153,119,.22), 0 0 30px rgba(121,153,119,.48) !important;
+    }
+
+    /* Navbar: mais premium, limpa e com menu mobile na direita */
+    header {
+      top: 18px !important;
+    }
+
+    .navbar.nav-pro {
+      height: 76px !important;
+      padding: 0 16px 0 26px !important;
+      display: grid !important;
+      grid-template-columns: 192px minmax(0, 1fr) auto auto !important;
+      gap: 16px !important;
+      border-radius: 999px !important;
+      background: rgba(26, 26, 26, .86) !important;
+      border: 1px solid rgba(217,216,198,.20) !important;
+      box-shadow: 0 24px 74px rgba(0,0,0,.42), inset 0 1px 0 rgba(248,247,239,.055) !important;
+      overflow: hidden !important;
+      backdrop-filter: blur(22px) saturate(1.15) !important;
+    }
+
+    .navbar.nav-pro::before {
+      background:
+        linear-gradient(90deg, rgba(217,216,198,.055), transparent 36%, rgba(121,153,119,.08)),
+        radial-gradient(circle at 9% 50%, rgba(121,153,119,.18), transparent 22%) !important;
+      opacity: 1 !important;
+    }
+
+    .navbar.nav-pro::after {
+      left: 28px !important;
+      right: 28px !important;
+      background: linear-gradient(90deg, transparent, rgba(121,153,119,.92), rgba(217,216,198,.36), transparent) !important;
+    }
+
+    header.scrolled .navbar.nav-pro {
+      height: 66px !important;
+      background: rgba(18, 18, 17, .93) !important;
+    }
+
+    .nav-pro .brand {
+      width: 182px !important;
+      min-width: 182px !important;
+      height: 50px !important;
+    }
+
+    .nav-pro .brand-logo {
+      width: 174px !important;
+      max-height: 42px !important;
+      object-fit: contain !important;
+      object-position: left center !important;
+    }
+
+    .nav-pro .nav-links,
+    .navbar.nav-pro .nav-links {
+      justify-self: center !important;
+      gap: 3px !important;
+      padding: 5px !important;
+      border: 1px solid rgba(217,216,198,.10) !important;
+      border-radius: 999px !important;
+      background: rgba(0, 0, 0, .18) !important;
+      box-shadow: inset 0 1px 20px rgba(0,0,0,.18) !important;
+    }
+
+    .nav-pro .nav-links a,
+    .navbar.nav-pro .nav-links a {
+      min-height: 40px !important;
+      padding: 0 14px !important;
+      color: rgba(217,216,198,.72) !important;
+      font-weight: 900 !important;
+      font-size: .84rem !important;
+      letter-spacing: -.015em !important;
+      border-radius: 999px !important;
+      border: 1px solid transparent !important;
+    }
+
+    .nav-pro .nav-links a:hover,
+    .nav-pro .nav-links a.active,
+    .navbar.nav-pro .nav-links a:hover,
+    .navbar.nav-pro .nav-links a.active {
+      color: var(--preto) !important;
+      background: var(--creme) !important;
+      border-color: rgba(217,216,198,.28) !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 12px 28px rgba(0,0,0,.18) !important;
+    }
+
+    .nav-pro .nav-links a::before,
+    .navbar.nav-pro .nav-links a::before {
+      display: none !important;
+    }
+
+    .auth-nav-btn,
+    .menu-btn {
+      border-radius: 999px !important;
+      border: 1px solid rgba(121,153,119,.40) !important;
+      background: rgba(121,153,119,.10) !important;
+      color: var(--creme) !important;
+      box-shadow: none !important;
+    }
+
+    .auth-nav-btn:hover,
+    .menu-btn:hover {
+      background: var(--verde-claro) !important;
+      color: var(--preto) !important;
+    }
+
+    /* Hero: composição editorial em 12 colunas */
+    .hero {
+      min-height: 100svh !important;
+      padding: clamp(132px, 14vw, 176px) 0 clamp(78px, 9vw, 118px) !important;
+      background:
+        radial-gradient(circle at 82% 46%, rgba(121,153,119,.14), transparent 30%),
+        var(--preto) !important;
+    }
+
+    .hero::after,
+    footer::before,
+    .contact-section::before {
+      background-size: 72px 72px !important;
+      opacity: .82 !important;
+    }
+
+    .hero-grid {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      align-items: center !important;
+      gap: clamp(28px, 5vw, 70px) !important;
+    }
+
+    .hero-copy {
+      grid-column: 1 / span 7 !important;
+    }
+
+    .hero-visual {
+      grid-column: 8 / -1 !important;
+      min-height: clamp(460px, 48vw, 650px) !important;
+    }
+
+    .eyebrow {
+      padding: 10px 14px !important;
+      color: var(--creme) !important;
+      background: rgba(121,153,119,.14) !important;
+      border-color: rgba(121,153,119,.36) !important;
+    }
+
+    .hero h1 strong,
+    .contact-copy h2 strong {
+      color: var(--verde-claro) !important;
+      text-shadow: none !important;
+    }
+
+    .hero p {
+      max-width: 660px !important;
+      margin: 30px 0 36px !important;
+      color: rgba(217,216,198,.75) !important;
+    }
+
+    .btn,
+    .client-primary,
+    .auth-primary,
+    .feedback-close,
+    .submit-btn {
+      min-height: 54px !important;
+      border-radius: 999px !important;
+      font-weight: 950 !important;
+      letter-spacing: -.015em !important;
+    }
+
+    .btn-primary,
+    .client-primary,
+    .auth-primary,
+    .submit-btn {
+      background: var(--verde-claro) !important;
+      color: var(--preto) !important;
+      border-color: transparent !important;
+    }
+
+    .btn-secondary,
+    .client-ghost,
+    .client-logout,
+    .is-secondary-send {
+      background: transparent !important;
+      color: var(--creme) !important;
+      border: 1px solid rgba(217,216,198,.22) !important;
+    }
+
+    .btn:hover,
+    .client-primary:hover,
+    .auth-primary:hover,
+    .submit-btn:hover,
+    .feedback-close:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 18px 46px rgba(0,0,0,.24) !important;
+    }
+
+    .logo-orbit {
+      width: min(520px, 86vw) !important;
+      border-radius: 38% 62% 54% 46% / 46% 40% 60% 54% !important;
+      background: rgba(121,153,119,.12) !important;
+      border-color: rgba(121,153,119,.28) !important;
+      box-shadow: inset 0 0 0 1px rgba(217,216,198,.06) !important;
+    }
+
+    .hero-logo-card {
+      width: min(428px, 78vw) !important;
+      border-radius: 34px !important;
+      background: #080908 !important;
+      border: 1px solid rgba(217,216,198,.24) !important;
+      box-shadow: 24px 24px 0 rgba(121,153,119,.18), 0 34px 90px rgba(0,0,0,.48) !important;
+      transform: rotate(-2.2deg) !important;
+    }
+
+    .hero-logo-card:hover {
+      transform: rotate(0deg) translateY(-8px) scale(1.015) !important;
+      box-shadow: 18px 18px 0 rgba(121,153,119,.24), 0 40px 110px rgba(0,0,0,.52) !important;
+    }
+
+    .floating-badge {
+      right: -2% !important;
+      bottom: 8% !important;
+      padding: 18px 22px !important;
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+      border: 2px solid var(--preto) !important;
+      border-radius: 18px !important;
+      box-shadow: 8px 8px 0 rgba(0,0,0,.55) !important;
+      text-transform: uppercase !important;
+      letter-spacing: .04em !important;
+      font-size: .88rem !important;
+    }
+
+    .marquee {
+      background: var(--verde-escuro) !important;
+      border-color: rgba(217,216,198,.16) !important;
+    }
+
+    .marquee span {
+      padding: 22px 42px !important;
+      letter-spacing: .14em !important;
+      color: var(--creme) !important;
+    }
+
+    .marquee span:nth-child(even) {
+      color: var(--verde-claro) !important;
+    }
+
+    /* Sections: grid, ritmo e hierarquia */
+    .section,
+    .contact-section {
+      padding: var(--kiwi-section) 0 !important;
+      position: relative !important;
+    }
+
+    .section-header {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      align-items: end !important;
+      gap: clamp(18px, 4vw, 44px) !important;
+      margin-bottom: clamp(34px, 6vw, 64px) !important;
+    }
+
+    .section-header > div {
+      grid-column: 1 / span 8 !important;
+    }
+
+    .section-header .section-desc {
+      grid-column: 9 / -1 !important;
+      max-width: none !important;
+      color: rgba(217,216,198,.68) !important;
+      padding-left: 24px !important;
+      border-left: 1px solid rgba(217,216,198,.16) !important;
+    }
+
+    .section-tag,
+    .client-tag {
+      color: var(--verde-claro) !important;
+      margin-bottom: 18px !important;
+    }
+
+    /* About: assimetria controlada */
+    .about-grid {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      gap: clamp(18px, 3vw, 34px) !important;
+      align-items: stretch !important;
+    }
+
+    .about-photo {
+      grid-column: 1 / span 5 !important;
+      min-height: clamp(520px, 54vw, 680px) !important;
+      border-radius: var(--kiwi-radius-xl) !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      box-shadow: var(--kiwi-shadow-card) !important;
+    }
+
+    .about-photo::after {
+      left: 24px !important;
+      right: 24px !important;
+      bottom: 24px !important;
+      width: fit-content !important;
+      background: var(--preto) !important;
+      border-color: rgba(217,216,198,.22) !important;
+      color: var(--creme) !important;
+      text-transform: uppercase !important;
+      letter-spacing: .08em !important;
+      font-size: .75rem !important;
+    }
+
+    .about-content {
+      grid-column: 6 / -1 !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 18px !important;
+    }
+
+    .about-card,
+    .testimonial,
+    .client-card,
+    .client-gate,
+    .auth-panel,
+    .feedback-card,
+    .briefing-form {
+      border: 1px solid rgba(217,216,198,.18) !important;
+      background: rgba(217,216,198,.075) !important;
+      box-shadow: 0 18px 54px rgba(0,0,0,.22) !important;
+      backdrop-filter: blur(18px) !important;
+    }
+
+    .about-card {
+      padding: clamp(26px, 3.4vw, 42px) !important;
+      border-radius: var(--kiwi-radius-lg) !important;
+    }
+
+    .about-card:nth-child(1) {
+      grid-column: 1 / -1 !important;
+      min-height: 248px !important;
+    }
+
+    .about-card:nth-child(2) {
+      grid-column: 1 / span 1 !important;
+    }
+
+    .about-card h3,
+    .flip-front h3,
+    .flip-back h3,
+    .testimonial h3,
+    .client-card h3 {
+      font-size: clamp(1.45rem, 2.1vw, 2.2rem) !important;
+      line-height: 1 !important;
+      letter-spacing: -.055em !important;
+    }
+
+    .stats {
+      grid-column: 2 / span 1 !important;
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    .stat {
+      min-height: 0 !important;
+      padding: 24px !important;
+      border-radius: var(--kiwi-radius-md) !important;
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+      border: 2px solid transparent !important;
+      box-shadow: 6px 6px 0 rgba(121,153,119,.16) !important;
+    }
+
+    .stat strong {
+      font-size: clamp(2.2rem, 4.2vw, 3.6rem) !important;
+      line-height: .9 !important;
+    }
+
+    /* Serviços: cards com peso visual e leitura clara */
+    .services-grid,
+    .testimonials-grid,
+    .client-stats {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      gap: clamp(16px, 2.2vw, 24px) !important;
+    }
+
+    .flip-card {
+      grid-column: span 4 !important;
+      min-height: 390px !important;
+    }
+
+    .flip-card:nth-child(2) {
+      transform: translateY(28px) !important;
+    }
+
+    .flip-front,
+    .flip-back {
+      padding: clamp(28px, 3.2vw, 42px) !important;
+      border-radius: var(--kiwi-radius-lg) !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      box-shadow: 0 22px 64px rgba(0,0,0,.24) !important;
+    }
+
+    .flip-front {
+      background: var(--verde-escuro) !important;
+    }
+
+    .flip-front::after {
+      width: 140px !important;
+      height: 140px !important;
+      right: 22px !important;
+      bottom: 22px !important;
+      border: 1px solid rgba(217,216,198,.12) !important;
+      background: rgba(121,153,119,.12) !important;
+    }
+
+    .service-number {
+      margin-bottom: clamp(82px, 10vw, 132px) !important;
+      width: 54px !important;
+      height: 54px !important;
+      display: grid !important;
+      place-items: center !important;
+      border-radius: 999px !important;
+      background: var(--preto) !important;
+      color: var(--verde-claro) !important;
+      border: 1px solid rgba(217,216,198,.16) !important;
+    }
+
+    .flip-back {
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+    }
+
+    .mini-link {
+      background: var(--preto) !important;
+      color: var(--creme) !important;
+      border: 1px solid rgba(26,26,26,.12) !important;
+    }
+
+    /* Processo: bloco manifesto */
+    .cube-wrap {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      gap: clamp(26px, 5vw, 70px) !important;
+      align-items: center !important;
+      padding: clamp(30px, 5.6vw, 72px) !important;
+      border-radius: var(--kiwi-radius-xl) !important;
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+      box-shadow: var(--kiwi-shadow-card) !important;
+    }
+
+    .cube-wrap::after {
+      width: 280px !important;
+      height: 280px !important;
+      border-radius: 38px !important;
+      right: -80px !important;
+      bottom: -92px !important;
+      background: rgba(121,153,119,.20) !important;
+      border: 2px solid rgba(26,26,26,.10) !important;
+      transform: rotate(12deg) !important;
+    }
+
+    .cube-wrap > .scene {
+      grid-column: 1 / span 4 !important;
+      width: clamp(176px, 23vw, 250px) !important;
+      height: clamp(176px, 23vw, 250px) !important;
+      margin: 50px auto !important;
+    }
+
+    .cube-copy {
+      grid-column: 5 / -1 !important;
+    }
+
+    .cube-copy h2 {
+      font-size: clamp(2.7rem, 6vw, 6.6rem) !important;
+      line-height: .9 !important;
+    }
+
+    .hard-hover {
+      background: var(--verde-forte) !important;
+      color: var(--creme) !important;
+      border: 2px solid var(--preto) !important;
+      box-shadow: 8px 8px 0 var(--preto) !important;
+    }
+
+    /* Galeria: bento grid com foco visual */
+    .gallery {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      grid-auto-rows: clamp(180px, 18vw, 252px) !important;
+      gap: 18px !important;
+    }
+
+    .gallery-item {
+      border-radius: var(--kiwi-radius-lg) !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      box-shadow: 0 22px 60px rgba(0,0,0,.22) !important;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: 1 / span 5 !important;
+      grid-row: span 2 !important;
+    }
+
+    .gallery-item:nth-child(2) {
+      grid-column: 6 / span 3 !important;
+      grid-row: span 1 !important;
+    }
+
+    .gallery-item:nth-child(3) {
+      grid-column: 9 / -1 !important;
+      grid-row: span 1 !important;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: 6 / -1 !important;
+      grid-row: span 1 !important;
+    }
+
+    .gallery-item img {
+      filter: saturate(.85) contrast(1.05) brightness(.82) !important;
+    }
+
+    .gallery-item::before {
+      background: linear-gradient(to top, rgba(0,0,0,.84), rgba(0,0,0,.14) 64%, transparent) !important;
+    }
+
+    .gallery-caption {
+      left: 24px !important;
+      right: 24px !important;
+      bottom: 24px !important;
+    }
+
+    /* Depoimentos */
+    .testimonial {
+      grid-column: span 4 !important;
+      padding: clamp(28px, 3.4vw, 42px) !important;
+      border-radius: var(--kiwi-radius-lg) !important;
+    }
+
+    .testimonial:hover,
+    .about-card:hover,
+    .client-card:hover {
+      border-color: rgba(121,153,119,.42) !important;
+      background: rgba(217,216,198,.095) !important;
+      transform: translateY(-6px) !important;
+    }
+
+    .stars {
+      color: var(--verde-claro) !important;
+      font-size: .92rem !important;
+    }
+
+    .avatar {
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+      box-shadow: 0 0 0 4px rgba(217,216,198,.08) !important;
+    }
+
+    /* Painel do cliente */
+    .client-area {
+      background: var(--preto) !important;
+      padding-top: var(--kiwi-section) !important;
+    }
+
+    .client-shell {
+      padding: clamp(26px, 5vw, 60px) !important;
+      border-radius: var(--kiwi-radius-xl) !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      background:
+        linear-gradient(180deg, rgba(217,216,198,.06), rgba(217,216,198,.025)),
+        var(--preto) !important;
+      box-shadow: var(--kiwi-shadow-card) !important;
+    }
+
+    .client-head {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      gap: 28px !important;
+      align-items: end !important;
+      margin-bottom: clamp(28px, 5vw, 56px) !important;
+    }
+
+    .client-head > div {
+      grid-column: 1 / span 7 !important;
+    }
+
+    .client-head > p {
+      grid-column: 8 / -1 !important;
+      padding-left: 24px !important;
+      border-left: 1px solid rgba(217,216,198,.16) !important;
+      color: rgba(217,216,198,.70) !important;
+    }
+
+    .client-gate {
+      padding: clamp(28px, 4vw, 48px) !important;
+      border-radius: var(--kiwi-radius-lg) !important;
+      background: var(--verde-escuro) !important;
+    }
+
+    .client-dashboard {
+      display: grid !important;
+      gap: 22px !important;
+    }
+
+    .client-topbar {
+      border-radius: var(--kiwi-radius-lg) !important;
+      background: rgba(217,216,198,.07) !important;
+      border: 1px solid rgba(217,216,198,.16) !important;
+      padding: 18px !important;
+    }
+
+    .client-stat {
+      grid-column: span 3 !important;
+      border-radius: var(--kiwi-radius-md) !important;
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+      border: 0 !important;
+      padding: 24px !important;
+    }
+
+    .client-stat strong {
+      font-size: clamp(2rem, 4vw, 3.2rem) !important;
+      letter-spacing: -.06em !important;
+    }
+
+    .client-grid {
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      gap: 22px !important;
+    }
+
+    .client-card {
+      grid-column: span 6 !important;
+      border-radius: var(--kiwi-radius-lg) !important;
+      padding: clamp(24px, 3vw, 34px) !important;
+    }
+
+    .client-input,
+    .client-select,
+    .client-textarea,
+    .auth-field input,
+    .auth-field select,
+    input,
+    textarea,
+    select {
+      border-radius: 16px !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      background: rgba(0,0,0,.28) !important;
+      color: var(--creme) !important;
+    }
+
+    .client-input:focus,
+    .client-select:focus,
+    .client-textarea:focus,
+    .auth-field input:focus,
+    .auth-field select:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--verde-claro) !important;
+      box-shadow: 0 0 0 4px rgba(121,153,119,.13) !important;
+    }
+
+    .favorite-btn {
+      border-radius: 999px !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      background: rgba(217,216,198,.06) !important;
+      color: var(--creme) !important;
+    }
+
+    .favorite-btn.active,
+    .favorite-btn:hover {
+      background: var(--verde-claro) !important;
+      color: var(--preto) !important;
+    }
+
+    /* Contato: fechamento forte e formulário alinhado */
+    .contact-section {
+      background: var(--preto) !important;
+      padding-bottom: 38px !important;
+    }
+
+    .contact-shell {
+      min-height: auto !important;
+      display: grid !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      align-items: center !important;
+      gap: clamp(26px, 5vw, 66px) !important;
+      padding: clamp(30px, 6vw, 72px) !important;
+      border-radius: var(--kiwi-radius-xl) !important;
+      border: 1px solid rgba(217,216,198,.18) !important;
+      background: var(--verde-escuro) !important;
+      box-shadow: var(--kiwi-shadow-card) !important;
+    }
+
+    .contact-copy {
+      grid-column: 1 / span 7 !important;
+    }
+
+    .contact-copy h2 {
+      font-size: clamp(3rem, 7.7vw, 8.4rem) !important;
+      line-height: .86 !important;
+      color: var(--creme) !important;
+    }
+
+    .briefing-form {
+      grid-column: 8 / -1 !important;
+      max-width: none !important;
+      min-height: auto !important;
+      padding: clamp(24px, 3.3vw, 38px) !important;
+      border-radius: var(--kiwi-radius-lg) !important;
+      background: rgba(26,26,26,.78) !important;
+    }
+
+    .briefing-form::before {
+      opacity: .68 !important;
+    }
+
+    .briefing-form input,
+    .briefing-form textarea {
+      min-height: 54px !important;
+      background: rgba(0,0,0,.30) !important;
+    }
+
+    .briefing-form textarea {
+      min-height: 154px !important;
+    }
+
+    .send-actions {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+
+    .footer-bottom {
+      margin-top: 34px !important;
+      color: rgba(217,216,198,.62) !important;
+    }
+
+    /* Modais e feedback: mesma linguagem visual */
+    .auth-modal.active,
+    .send-feedback.active {
+      backdrop-filter: blur(18px) !important;
+    }
+
+    .auth-card {
+      border-radius: var(--kiwi-radius-xl) !important;
+      border: 1px solid rgba(217,216,198,.20) !important;
+      box-shadow: 0 36px 110px rgba(0,0,0,.56) !important;
+    }
+
+    .auth-visual {
+      background: var(--verde-escuro) !important;
+    }
+
+    .auth-tab.active {
+      background: var(--verde-claro) !important;
+      color: var(--preto) !important;
+    }
+
+    /* Acessibilidade de movimento */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (max-width: 1120px) {
+      .navbar.nav-pro {
+        grid-template-columns: 170px minmax(0, 1fr) auto auto !important;
+        gap: 10px !important;
+      }
+
+      .nav-pro .brand {
+        width: 160px !important;
+        min-width: 160px !important;
+      }
+
+      .nav-pro .brand-logo {
+        width: 154px !important;
+      }
+
+      .nav-pro .nav-links a,
+      .navbar.nav-pro .nav-links a {
+        padding-inline: 10px !important;
+        font-size: .80rem !important;
+      }
+    }
+
+    @media (max-width: 920px) {
+      body {
+        cursor: auto !important;
+      }
+
+      .container,
+      .navbar.nav-pro {
+        width: min(100% - 28px, var(--kiwi-max)) !important;
+      }
+
+      .navbar.nav-pro {
+        height: 68px !important;
+        grid-template-columns: auto 1fr auto auto !important;
+        padding: 0 12px 0 18px !important;
+        overflow: visible !important;
+      }
+
+      .nav-pro .brand {
+        width: 142px !important;
+        min-width: 142px !important;
+      }
+
+      .nav-pro .brand-logo {
+        width: 136px !important;
+      }
+
+      .nav-pro .nav-links,
+      .navbar.nav-pro .nav-links {
+        position: absolute !important;
+        top: 78px !important;
+        left: auto !important;
+        right: 0 !important;
+        width: min(340px, calc(100vw - 28px)) !important;
+        display: grid !important;
+        justify-self: end !important;
+        gap: 8px !important;
+        padding: 14px !important;
+        border-radius: 28px !important;
+        background: rgba(18,18,17,.98) !important;
+        border: 1px solid rgba(217,216,198,.18) !important;
+        box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+        transform: translateY(-14px) translateX(8px) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+
+      .nav-pro .nav-links.active,
+      .navbar.nav-pro .nav-links.active {
+        transform: translateY(0) translateX(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+
+      .nav-pro .nav-links a,
+      .navbar.nav-pro .nav-links a {
+        width: 100% !important;
+        justify-content: flex-start !important;
+        min-height: 46px !important;
+        padding-inline: 16px !important;
+        font-size: .92rem !important;
+      }
+
+      .hero-grid,
+      .section-header,
+      .about-grid,
+      .cube-wrap,
+      .client-head,
+      .contact-shell {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-copy,
+      .hero-visual,
+      .section-header > div,
+      .section-header .section-desc,
+      .about-photo,
+      .about-content,
+      .cube-wrap > .scene,
+      .cube-copy,
+      .client-head > div,
+      .client-head > p,
+      .contact-copy,
+      .briefing-form {
+        grid-column: auto !important;
+      }
+
+      .section-header .section-desc,
+      .client-head > p {
+        padding-left: 0 !important;
+        border-left: 0 !important;
+        max-width: 680px !important;
+      }
+
+      .hero {
+        padding-top: 126px !important;
+      }
+
+      .hero-visual {
+        min-height: 430px !important;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr !important;
+      }
+
+      .about-card:nth-child(1),
+      .about-card:nth-child(2),
+      .stats {
+        grid-column: auto !important;
+      }
+
+      .stats,
+      .services-grid,
+      .testimonials-grid,
+      .client-stats,
+      .client-grid,
+      .gallery {
+        grid-template-columns: 1fr !important;
+      }
+
+      .flip-card,
+      .testimonial,
+      .client-stat,
+      .client-card,
+      .gallery-item,
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(2),
+      .gallery-item:nth-child(3),
+      .gallery-item:nth-child(4) {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+
+      .flip-card:nth-child(2) {
+        transform: none !important;
+      }
+
+      .gallery {
+        grid-auto-rows: 300px !important;
+      }
+
+      .cube-wrap > .scene {
+        margin: 22px auto !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --kiwi-gutter: 24px;
+        --kiwi-section: 82px;
+      }
+
+      h1 {
+        font-size: clamp(3.1rem, 17vw, 5.4rem) !important;
+        line-height: .88 !important;
+        letter-spacing: -.07em !important;
+      }
+
+      .section-title,
+      .client-head h2,
+      .cube-copy h2,
+      .contact-copy h2 {
+        font-size: clamp(2.35rem, 13vw, 4.2rem) !important;
+        line-height: .92 !important;
+      }
+
+      .navbar.nav-pro {
+        width: min(100% - 22px, var(--kiwi-max)) !important;
+        grid-template-columns: auto 1fr auto !important;
+      }
+
+      .auth-nav-btn {
+        display: none !important;
+      }
+
+      .menu-btn {
+        grid-column: 3 !important;
+      }
+
+      .hero p,
+      .contact-copy p {
+        margin-block: 24px 28px !important;
+      }
+
+      .hero-actions,
+      .contact-actions {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+      }
+
+      .btn,
+      .contact-actions .btn {
+        width: 100% !important;
+      }
+
+      .hero-logo-card {
+        width: min(330px, 80vw) !important;
+        border-radius: 28px !important;
+      }
+
+      .floating-badge {
+        right: 4% !important;
+        bottom: 4% !important;
+        font-size: .74rem !important;
+        padding: 14px 16px !important;
+      }
+
+      .about-photo {
+        min-height: 390px !important;
+        border-radius: 30px !important;
+      }
+
+      .about-card,
+      .testimonial,
+      .client-card,
+      .client-shell,
+      .contact-shell,
+      .briefing-form,
+      .cube-wrap {
+        border-radius: 28px !important;
+      }
+
+      .gallery {
+        grid-auto-rows: 260px !important;
+      }
+
+      .footer-bottom {
+        display: grid !important;
+        gap: 8px !important;
+      }
+    }
+
+  
+
+    /* =========================================================
+       AJUSTES DE CONTRASTE + ESPAÇAMENTO + FORMULÁRIO (REV 2)
+       ========================================================= */
+    :root {
+      --kiwi-section: clamp(68px, 8vw, 102px) !important;
+    }
+
+    .section,
+    .contact-section {
+      padding: var(--kiwi-section) 0 !important;
+    }
+
+    .section-header {
+      margin-bottom: clamp(28px, 4vw, 48px) !important;
+    }
+
+    .client-area {
+      padding-top: var(--kiwi-section) !important;
+    }
+
+    /* Hero: logo sem fundo preto */
+    .hero-logo-card {
+      background: transparent !important;
+      border: 1px solid rgba(217,216,198,.14) !important;
+      box-shadow: 18px 18px 0 rgba(121,153,119,.14), 0 30px 86px rgba(0,0,0,.38) !important;
+    }
+
+    .hero-logo-card:hover {
+      box-shadow: 14px 14px 0 rgba(121,153,119,.18), 0 34px 96px rgba(0,0,0,.44) !important;
+    }
+
+    .hero-logo-card img {
+      background: transparent !important;
+      border-radius: 0 !important;
+      filter: drop-shadow(0 10px 34px rgba(0,0,0,.34)) !important;
+    }
+
+    /* Painel do cliente: contraste corrigido */
+    .client-topbar {
+      background: rgba(217,216,198,.07) !important;
+      border: 1px solid rgba(217,216,198,.16) !important;
+      color: var(--creme) !important;
+    }
+
+    .client-topbar > div:last-child {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+    }
+
+    .client-user strong {
+      color: var(--creme) !important;
+    }
+
+    .client-user span {
+      color: rgba(217,216,198,.74) !important;
+    }
+
+    .client-ghost,
+    .client-logout {
+      color: var(--creme) !important;
+      border-color: rgba(217,216,198,.22) !important;
+      background: transparent !important;
+    }
+
+    .client-ghost:hover,
+    .client-logout:hover {
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+    }
+
+    .client-stat {
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+    }
+
+    .client-stat strong {
+      color: var(--verde-claro) !important;
+    }
+
+    .client-stat span {
+      color: rgba(26,26,26,.72) !important;
+    }
+
+    .client-card h3,
+    .client-item strong {
+      color: var(--creme) !important;
+    }
+
+    .client-card p,
+    .client-item p {
+      color: rgba(217,216,198,.74) !important;
+    }
+
+    .client-meta {
+      color: rgba(217,216,198,.58) !important;
+    }
+
+    /* Formulário: volta para a versão mais compacta */
+    .contact-shell {
+      min-height: auto !important;
+      display: grid !important;
+      grid-template-columns: 1.02fr 0.98fr !important;
+      align-items: center !important;
+      gap: 54px !important;
+      padding: clamp(26px, 5vw, 64px) !important;
+      border-radius: 44px !important;
+      background:
+        linear-gradient(135deg, rgba(31, 51, 19, 0.82), rgba(16, 16, 15, 0.94) 58%, rgba(12, 12, 12, 0.98)) !important;
+    }
+
+    .contact-copy {
+      grid-column: auto !important;
+    }
+
+    .briefing-form {
+      grid-column: auto !important;
+      width: 100% !important;
+      max-width: 430px !important;
+      min-height: auto !important;
+      justify-self: center !important;
+      padding: 22px !important;
+      border-radius: 28px !important;
+      background: rgba(16, 16, 15, 0.64) !important;
+      border: 1px solid rgba(217, 216, 198, 0.22) !important;
+      backdrop-filter: blur(18px) !important;
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+      transform: rotate(-1.5deg) !important;
+      display: block !important;
+      overflow: hidden !important;
+    }
+
+    .briefing-form::before {
+      content: "" !important;
+      display: block !important;
+      position: absolute !important;
+      width: 230px !important;
+      height: 230px !important;
+      right: -120px !important;
+      top: -120px !important;
+      border-radius: 50% !important;
+      background: rgba(121, 153, 119, 0.16) !important;
+      opacity: 1 !important;
+      z-index: 0 !important;
+    }
+
+    .briefing-form > * {
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    .briefing-form .form-row {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 10px !important;
+    }
+
+    .briefing-form .field {
+      margin-bottom: 10px !important;
+    }
+
+    .briefing-form label {
+      margin-bottom: 6px !important;
+      color: rgba(217, 216, 198, 0.73) !important;
+      font-size: 0.72rem !important;
+      font-weight: 850 !important;
+    }
+
+    .briefing-form input,
+    .briefing-form textarea {
+      min-height: 0 !important;
+      padding: 12px 13px !important;
+      border-radius: 12px !important;
+      background: rgba(0, 0, 0, 0.33) !important;
+      border: 1px solid rgba(217, 216, 198, 0.18) !important;
+      color: var(--branco) !important;
+      font-size: 0.84rem !important;
+      box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .briefing-form input::placeholder,
+    .briefing-form textarea::placeholder {
+      color: rgba(217, 216, 198, 0.48) !important;
+    }
+
+    .briefing-form textarea {
+      min-height: 116px !important;
+      resize: none !important;
+    }
+
+    .briefing-form .submit-btn {
+      min-height: 48px !important;
+      margin-top: 2px !important;
+      font-size: 0.86rem !important;
+    }
+
+    .send-actions {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 10px !important;
+    }
+
+    @media (max-width: 920px) {
+      :root {
+        --kiwi-section: 62px !important;
+      }
+
+      .contact-shell {
+        grid-template-columns: 1fr !important;
+        gap: 34px !important;
+      }
+
+      .briefing-form {
+        max-width: 100% !important;
+        justify-self: stretch !important;
+        transform: none !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --kiwi-section: 54px !important;
+      }
+
+      .briefing-form {
+        padding: 20px !important;
+      }
+
+      .briefing-form .form-row {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTES FINAIS DO USUÁRIO — HOVER, HERO, CARDS E FORM
+       ========================================================= */
+
+    /* 1) Luzinha/hover contida: evita aparecer fora dos elementos */
+    .about-card,
+    .testimonial,
+    .flip-front,
+    .flip-back,
+    .client-card,
+    .client-gate,
+    .client-topbar,
+    .client-stat,
+    .briefing-form,
+    .contact-form,
+    .auth-card,
+    .feedback-card {
+      position: relative !important;
+      overflow: hidden !important;
+      isolation: isolate !important;
+      clip-path: inset(0 round inherit) !important;
+    }
+
+    .about-card::before,
+    .testimonial::before,
+    .flip-front::before {
+      width: 130px !important;
+      height: 130px !important;
+      filter: blur(8px) !important;
+      opacity: 0 !important;
+      mix-blend-mode: normal !important;
+    }
+
+    .about-card:hover::before,
+    .testimonial:hover::before,
+    .flip-card:hover .flip-front::before {
+      opacity: .35 !important;
+    }
+
+    .cursor-outline {
+      opacity: .42 !important;
+      width: 34px !important;
+      height: 34px !important;
+      background: transparent !important;
+      border-color: rgba(217, 216, 198, .42) !important;
+    }
+
+    body.cursor-hover .cursor-outline {
+      width: 42px !important;
+      height: 42px !important;
+      background: rgba(121, 153, 119, .045) !important;
+      border-color: rgba(121, 153, 119, .48) !important;
+    }
+
+    body:has(input:hover) .cursor-outline,
+    body:has(textarea:hover) .cursor-outline,
+    body:has(select:hover) .cursor-outline,
+    body:has(.briefing-form:hover) .cursor-outline,
+    body:has(.client-card:hover) .cursor-outline,
+    body:has(.auth-card:hover) .cursor-outline {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    body:has(input:hover) .spotlight,
+    body:has(textarea:hover) .spotlight,
+    body:has(select:hover) .spotlight,
+    body:has(.briefing-form:hover) .spotlight,
+    body:has(.client-card:hover) .spotlight,
+    body:has(.auth-card:hover) .spotlight {
+      opacity: 0 !important;
+    }
+
+    /* 2) Hero: logo transparente maior */
+    .hero-logo-card {
+      width: min(500px, 88vw) !important;
+      aspect-ratio: 1 !important;
+      background: transparent !important;
+      border-color: rgba(217, 216, 198, .12) !important;
+      box-shadow: 18px 18px 0 rgba(121, 153, 119, .12), 0 32px 90px rgba(0, 0, 0, .36) !important;
+    }
+
+    .hero-logo-card img {
+      width: 92% !important;
+      height: 92% !important;
+      object-fit: contain !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      filter: drop-shadow(0 16px 34px rgba(0, 0, 0, .32)) !important;
+    }
+
+    .logo-orbit {
+      width: min(580px, 92vw) !important;
+    }
+
+    /* 3) Cards de serviços: troca a bolinha verde pela logo Kiwi */
+    .flip-front::after {
+      display: none !important;
+    }
+
+    .service-logo-mark {
+      position: absolute !important;
+      right: clamp(20px, 3vw, 34px) !important;
+      bottom: clamp(20px, 3vw, 34px) !important;
+      width: clamp(92px, 10vw, 150px) !important;
+      height: clamp(92px, 10vw, 150px) !important;
+      object-fit: contain !important;
+      opacity: .18 !important;
+      filter: saturate(.95) contrast(1.1) drop-shadow(0 14px 34px rgba(0, 0, 0, .28)) !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+      transform: rotate(-5deg) !important;
+      transition: opacity .28s ease, transform .28s ease !important;
+    }
+
+    .flip-card:hover .service-logo-mark {
+      opacity: .28 !important;
+      transform: rotate(0deg) scale(1.04) !important;
+    }
+
+    .flip-front h3,
+    .flip-front p,
+    .service-number {
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    /* 4) Formulário reto */
+    .briefing-form,
+    .briefing-form:hover,
+    .contact-form.briefing-form,
+    .contact-form.briefing-form:hover {
+      transform: none !important;
+      rotate: 0deg !important;
+    }
+
+    @media (max-width: 920px) {
+      .hero-logo-card {
+        width: min(430px, 84vw) !important;
+      }
+
+      .logo-orbit {
+        width: min(500px, 90vw) !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-logo-card {
+        width: min(350px, 88vw) !important;
+      }
+
+      .service-logo-mark {
+        width: 96px !important;
+        height: 96px !important;
+      }
+    }
+
+    body.no-cursor-glow .cursor-outline,
+    body.no-cursor-glow .spotlight { opacity: 0 !important; visibility: hidden !important; }
+
+
+
+    /* =========================================================
+       CORREÇÕES VISUAIS — HERO LIMPO, FLIP ESTÁVEL E FORM MAIOR
+       ========================================================= */
+
+    /* 1) Hero: remove a bolha/gradiente verde atrás da logo */
+    .hero-visual::after {
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .logo-orbit {
+      background: transparent !important;
+      box-shadow: none !important;
+      border-color: rgba(217,216,198,.12) !important;
+      backdrop-filter: none !important;
+    }
+
+    .hero-logo-card,
+    .hero-logo-card:hover {
+      background: transparent !important;
+      box-shadow: 0 30px 90px rgba(0,0,0,.34) !important;
+      border-color: rgba(217,216,198,.16) !important;
+    }
+
+    .hero-logo-card img {
+      width: 96% !important;
+      height: 96% !important;
+      object-fit: contain !important;
+      background: transparent !important;
+      filter: drop-shadow(0 18px 36px rgba(0,0,0,.34)) !important;
+    }
+
+    /* 2) Cards flip: frente e verso travados no mesmo plano */
+    .services-grid {
+      align-items: stretch !important;
+      overflow: visible !important;
+    }
+
+    .flip-card {
+      position: relative !important;
+      height: clamp(330px, 28vw, 390px) !important;
+      min-height: unset !important;
+      perspective: 1200px !important;
+      overflow: visible !important;
+      transform-style: preserve-3d !important;
+    }
+
+    .flip-inner {
+      position: relative !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 100% !important;
+      transform-style: preserve-3d !important;
+      transform-origin: center center !important;
+      transition: transform .72s cubic-bezier(.17,.67,.26,1.04) !important;
+      will-change: transform !important;
+    }
+
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg) !important;
+    }
+
+    .flip-front,
+    .flip-back {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      backface-visibility: hidden !important;
+      -webkit-backface-visibility: hidden !important;
+      transform-style: preserve-3d !important;
+      overflow: hidden !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+
+    .flip-front {
+      transform: rotateY(0deg) translateZ(1px) !important;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg) translateZ(1px) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+
+    .flip-card:hover,
+    .flip-card:hover .flip-front,
+    .flip-card:hover .flip-back {
+      translate: none !important;
+    }
+
+    .service-logo-mark {
+      right: clamp(18px, 2.6vw, 30px) !important;
+      bottom: clamp(18px, 2.6vw, 30px) !important;
+      width: clamp(86px, 8vw, 128px) !important;
+      height: clamp(86px, 8vw, 128px) !important;
+      opacity: .16 !important;
+      transform: rotate(-4deg) translateZ(2px) !important;
+    }
+
+    .flip-card:hover .service-logo-mark {
+      opacity: .22 !important;
+      transform: rotate(0deg) scale(1.02) translateZ(2px) !important;
+    }
+
+    /* 3) Formulário maior, reto e proporcional à section */
+    .contact-shell {
+      grid-template-columns: .9fr 1.1fr !important;
+      gap: clamp(34px, 5vw, 70px) !important;
+      align-items: center !important;
+    }
+
+    .briefing-form,
+    .briefing-form:hover,
+    .contact-form.briefing-form,
+    .contact-form.briefing-form:hover {
+      width: 100% !important;
+      max-width: 540px !important;
+      min-height: 0 !important;
+      padding: clamp(28px, 3.4vw, 40px) !important;
+      border-radius: 32px !important;
+      transform: none !important;
+      rotate: 0deg !important;
+      justify-self: center !important;
+    }
+
+    .briefing-form .form-row {
+      gap: 14px !important;
+    }
+
+    .briefing-form .field {
+      margin-bottom: 14px !important;
+    }
+
+    .briefing-form input {
+      min-height: 56px !important;
+      padding: 15px 16px !important;
+      font-size: .92rem !important;
+    }
+
+    .briefing-form textarea {
+      min-height: 158px !important;
+      padding: 16px !important;
+      font-size: .92rem !important;
+    }
+
+    .briefing-form .submit-btn {
+      min-height: 56px !important;
+      font-size: .94rem !important;
+    }
+
+    .send-actions {
+      gap: 12px !important;
+    }
+
+    @media (max-width: 920px) {
+      .contact-shell {
+        grid-template-columns: 1fr !important;
+      }
+
+      .briefing-form,
+      .contact-form.briefing-form {
+        max-width: 100% !important;
+      }
+
+      .flip-card {
+        height: 330px !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-logo-card img {
+        width: 94% !important;
+        height: 94% !important;
+      }
+
+      .flip-card {
+        height: 320px !important;
+      }
+
+      .briefing-form,
+      .contact-form.briefing-form {
+        padding: 24px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTES FINOS — CLIENTE, HERO, CARDS E CONTACT
+       ========================================================= */
+
+    /* 1) Área do cliente: bloqueia o glow/spotlight onde estava vazando */
+    .client-area,
+    .client-shell,
+    .client-grid,
+    .client-card,
+    .client-mini-form,
+    .client-list,
+    .client-item,
+    .client-input,
+    .client-select,
+    .client-textarea,
+    .contact-shell,
+    .briefing-form {
+      isolation: isolate !important;
+    }
+
+    .client-card::before,
+    .client-card::after,
+    .client-item::before,
+    .client-item::after,
+    .client-mini-form::before,
+    .client-mini-form::after,
+    .client-list::before,
+    .client-list::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    body:has(.client-area:hover) .spotlight,
+    body:has(.client-area *:hover) .spotlight,
+    body:has(.client-area:focus-within) .spotlight,
+    body:has(.client-area *:focus) .spotlight,
+    body:has(.client-area:hover) .cursor-outline,
+    body:has(.client-area *:hover) .cursor-outline,
+    body:has(.client-area:focus-within) .cursor-outline,
+    body:has(.client-area *:focus) .cursor-outline {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    /* 2) Cards giratórios: bolinha da numeração em creme */
+    .service-number {
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+      border: 1px solid rgba(26,26,26,.08) !important;
+      box-shadow: 0 8px 22px rgba(0,0,0,.16) !important;
+    }
+
+    /* 3) Hero: remove o quadrado da logo e deixa só a órbita orgânica */
+    .hero-logo-card,
+    .hero-logo-card:hover {
+      width: auto !important;
+      height: auto !important;
+      aspect-ratio: auto !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      display: grid !important;
+      place-items: center !important;
+      transform: none !important;
+    }
+
+    .hero-logo-card img {
+      width: min(540px, 92vw) !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      filter: drop-shadow(0 16px 28px rgba(0,0,0,.22)) !important;
+    }
+
+    .logo-orbit {
+      width: min(600px, 94vw) !important;
+      height: min(600px, 94vw) !important;
+      background: transparent !important;
+      border-color: rgba(217,216,198,.12) !important;
+      box-shadow: none !important;
+    }
+
+    /* 4) Contact: volta o impacto do título e aumenta o form sem conflito */
+    .contact-shell {
+      grid-template-columns: minmax(0, 1fr) minmax(520px, 580px) !important;
+      gap: clamp(34px, 4.5vw, 64px) !important;
+      align-items: center !important;
+    }
+
+    .contact-copy {
+      grid-column: auto !important;
+      max-width: 640px !important;
+    }
+
+    .contact-copy h2 {
+      max-width: 620px !important;
+      font-size: clamp(3rem, 7.7vw, 8.4rem) !important;
+      line-height: .86 !important;
+      letter-spacing: -0.065em !important;
+      color: var(--creme) !important;
+    }
+
+    .contact-copy h2 strong {
+      color: var(--verde-claro) !important;
+    }
+
+    .briefing-form,
+    .briefing-form:hover,
+    .contact-form.briefing-form,
+    .contact-form.briefing-form:hover {
+      max-width: 580px !important;
+      width: 100% !important;
+      padding: clamp(30px, 3.6vw, 42px) !important;
+      border-radius: 34px !important;
+      justify-self: end !important;
+      transform: none !important;
+      rotate: 0deg !important;
+    }
+
+    .briefing-form .form-row {
+      gap: 16px !important;
+    }
+
+    .briefing-form .field {
+      margin-bottom: 15px !important;
+    }
+
+    .briefing-form input {
+      min-height: 58px !important;
+      font-size: .94rem !important;
+    }
+
+    .briefing-form textarea {
+      min-height: 168px !important;
+      font-size: .94rem !important;
+    }
+
+    .briefing-form .submit-btn {
+      min-height: 58px !important;
+      font-size: .96rem !important;
+    }
+
+    @media (max-width: 920px) {
+      .contact-shell {
+        grid-template-columns: 1fr !important;
+      }
+
+      .contact-copy,
+      .briefing-form,
+      .contact-form.briefing-form {
+        max-width: 100% !important;
+        justify-self: stretch !important;
+      }
+
+      .hero-logo-card img {
+        width: min(430px, 88vw) !important;
+      }
+
+      .logo-orbit {
+        width: min(500px, 90vw) !important;
+        height: min(500px, 90vw) !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTES FINAIS 4 — FORM LOGO, BOTÃO CLIENTE E HERO ORBIT
+       ========================================================= */
+
+    /* 1) Section do forms: logo Kiwi no canto */
+    .contact-shell {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .contact-corner-logo {
+      position: absolute !important;
+      top: 18px !important;
+      right: 22px !important;
+      width: clamp(104px, 10vw, 148px) !important;
+      height: auto !important;
+      object-fit: contain !important;
+      opacity: .94 !important;
+      z-index: 3 !important;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,.22)) !important;
+      pointer-events: none !important;
+    }
+
+    /* 2) Botão entrar/cadastrar: padding e contraste melhores */
+    .client-gate .client-primary,
+    #clientGateLogin {
+      min-height: 58px !important;
+      padding: 0 28px !important;
+      width: fit-content !important;
+      max-width: 100% !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      border-radius: 999px !important;
+      background: var(--verde-claro) !important;
+      color: var(--preto) !important;
+      border: 1px solid rgba(26,26,26,.08) !important;
+      box-shadow: 0 14px 30px rgba(0,0,0,.18) !important;
+      font-size: .98rem !important;
+      font-weight: 950 !important;
+      letter-spacing: -.02em !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+    }
+
+    .client-gate .client-primary:hover,
+    #clientGateLogin:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 18px 38px rgba(0,0,0,.22) !important;
+      background: var(--creme) !important;
+      color: var(--preto) !important;
+    }
+
+    /* 3) Hero: órbita menor e mais animada */
+    .logo-orbit {
+      width: min(520px, 82vw) !important;
+      height: min(520px, 82vw) !important;
+      animation: kiwiOrbitFloat 10s ease-in-out infinite !important;
+      border: 1px solid rgba(217,216,198,.14) !important;
+      transform-origin: center center !important;
+    }
+
+    @keyframes kiwiOrbitFloat {
+      0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        border-radius: 42% 58% 55% 45% / 46% 42% 58% 54%;
+      }
+      25% {
+        transform: translateY(-8px) rotate(2deg) scale(1.015);
+        border-radius: 49% 51% 46% 54% / 55% 43% 57% 45%;
+      }
+      50% {
+        transform: translateY(4px) rotate(-2deg) scale(.99);
+        border-radius: 55% 45% 53% 47% / 44% 58% 42% 56%;
+      }
+      75% {
+        transform: translateY(-6px) rotate(1deg) scale(1.01);
+        border-radius: 46% 54% 48% 52% / 52% 46% 54% 48%;
+      }
+      100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        border-radius: 42% 58% 55% 45% / 46% 42% 58% 54%;
+      }
+    }
+
+    .hero-logo-card img {
+      width: min(500px, 78vw) !important;
+      max-width: 100% !important;
+    }
+
+    @media (max-width: 920px) {
+      .contact-corner-logo {
+        width: 112px !important;
+        top: 16px !important;
+        right: 18px !important;
+      }
+
+      .logo-orbit {
+        width: min(430px, 80vw) !important;
+        height: min(430px, 80vw) !important;
+      }
+
+      .hero-logo-card img {
+        width: min(390px, 74vw) !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .contact-corner-logo {
+        width: 92px !important;
+      }
+
+      .client-gate .client-primary,
+      #clientGateLogin {
+        min-height: 54px !important;
+        padding: 0 22px !important;
+        font-size: .92rem !important;
+        white-space: normal !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTES FINAIS 5 — LOGO NO FORM E NAV SEM PONTO
+       ========================================================= */
+
+    /* remove o pontinho verde depois da logo da navbar */
+    .nav-pro .brand::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* logo dentro do formulário, respeitando o grid visual */
+    .briefing-form {
+      position: relative !important;
+    }
+
+    .briefing-form .contact-corner-logo {
+      position: static !important;
+      display: block !important;
+      width: clamp(152px, 18vw, 230px) !important;
+      height: auto !important;
+      margin: 0 0 22px auto !important;
+      object-fit: contain !important;
+      opacity: .98 !important;
+      z-index: 2 !important;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,.18)) !important;
+      pointer-events: none !important;
+    }
+
+    @media (max-width: 920px) {
+      .briefing-form .contact-corner-logo {
+        width: clamp(136px, 28vw, 190px) !important;
+        margin-bottom: 18px !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .briefing-form .contact-corner-logo {
+        width: 144px !important;
+        margin-bottom: 16px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTES FINAIS 6 — LOGO SOBRE O FORM + FORM SECTION MAIS COMPACTA
+       ========================================================= */
+
+    /* section de contato mais compacta para Full HD */
+    .contact-section {
+      padding: clamp(44px, 5vw, 72px) 0 clamp(28px, 3.8vw, 52px) !important;
+    }
+
+    .contact-shell {
+      position: relative !important;
+      overflow: hidden !important;
+      gap: clamp(28px, 3.8vw, 54px) !important;
+      padding: clamp(22px, 3vw, 38px) !important;
+      min-height: auto !important;
+      align-items: center !important;
+    }
+
+    .contact-copy h2 {
+      font-size: clamp(2.85rem, 6.3vw, 7rem) !important;
+      line-height: .84 !important;
+      letter-spacing: -0.07em !important;
+      margin-bottom: 8px !important;
+    }
+
+    .contact-copy p {
+      margin: 18px 0 24px !important;
+      max-width: 560px !important;
+      font-size: 1rem !important;
+      line-height: 1.52 !important;
+    }
+
+    .contact-actions {
+      gap: 12px !important;
+    }
+
+    .briefing-form,
+    .briefing-form:hover,
+    .contact-form.briefing-form,
+    .contact-form.briefing-form:hover {
+      max-width: 560px !important;
+      padding: 28px !important;
+      border-radius: 30px !important;
+    }
+
+    .briefing-form::before {
+      display: none !important;
+      content: none !important;
+      background: none !important;
+    }
+
+    .briefing-form .field {
+      margin-bottom: 12px !important;
+    }
+
+    .briefing-form label {
+      margin-bottom: 6px !important;
+      font-size: .84rem !important;
+    }
+
+    .briefing-form input,
+    .briefing-form textarea {
+      padding: 12px 14px !important;
+      font-size: .92rem !important;
+    }
+
+    .briefing-form input {
+      min-height: 54px !important;
+    }
+
+    .briefing-form textarea {
+      min-height: 132px !important;
+    }
+
+    .briefing-form .submit-btn {
+      min-height: 54px !important;
+      font-size: .94rem !important;
+    }
+
+    /* logo acima do formulário, um pouco maior */
+    .contact-shell > .contact-corner-logo {
+      position: absolute !important;
+      top: 26px !important;
+      right: clamp(48px, 5vw, 74px) !important;
+      width: clamp(190px, 17vw, 260px) !important;
+      height: auto !important;
+      object-fit: contain !important;
+      opacity: .98 !important;
+      z-index: 4 !important;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,.18)) !important;
+      pointer-events: none !important;
+    }
+
+    /* se ainda existir dentro do form, neutraliza */
+    .briefing-form .contact-corner-logo {
+      position: absolute !important;
+      width: 0 !important;
+      height: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      margin: 0 !important;
+      pointer-events: none !important;
+    }
+
+    @media (max-width: 1200px) {
+      .contact-copy h2 {
+        font-size: clamp(2.7rem, 5.7vw, 6.2rem) !important;
+      }
+
+      .contact-shell > .contact-corner-logo {
+        width: clamp(176px, 18vw, 228px) !important;
+        top: 24px !important;
+        right: 38px !important;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .contact-section {
+        padding: 52px 0 30px !important;
+      }
+
+      .contact-shell {
+        padding-top: 88px !important;
+      }
+
+      .contact-shell > .contact-corner-logo {
+        top: 22px !important;
+        right: 26px !important;
+        width: clamp(158px, 34vw, 210px) !important;
+      }
+
+      .briefing-form,
+      .contact-form.briefing-form {
+        max-width: 100% !important;
+        padding: 24px !important;
+      }
+
+      .contact-copy p {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .contact-shell {
+        padding-top: 82px !important;
+      }
+
+      .contact-shell > .contact-corner-logo {
+        top: 18px !important;
+        right: 18px !important;
+        width: 148px !important;
+      }
+
+      .contact-copy h2 {
+        font-size: clamp(2.5rem, 12vw, 4.45rem) !important;
+      }
+
+      .briefing-form textarea {
+        min-height: 118px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 7 — TROCA LOGO COM “VAMOS CRIAR”
+       ========================================================= */
+
+    /* A logo vai para o lado do texto, no lugar visual do selo */
+    .contact-copy {
+      position: relative !important;
+      padding-top: clamp(78px, 7vw, 108px) !important;
+    }
+
+    .contact-shell > .contact-corner-logo {
+      position: absolute !important;
+      top: clamp(26px, 3.2vw, 42px) !important;
+      left: clamp(30px, 5vw, 68px) !important;
+      right: auto !important;
+      width: clamp(190px, 18vw, 260px) !important;
+      height: auto !important;
+      object-fit: contain !important;
+      opacity: .98 !important;
+      z-index: 5 !important;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.18)) !important;
+      pointer-events: none !important;
+    }
+
+    /* O selo “Vamos criar” vai para a área superior direita */
+    .contact-eyebrow {
+      position: absolute !important;
+      top: clamp(28px, 3.2vw, 42px) !important;
+      right: clamp(30px, 5vw, 68px) !important;
+      left: auto !important;
+      margin: 0 !important;
+      z-index: 6 !important;
+      width: fit-content !important;
+      background: rgba(121,153,119,.14) !important;
+      border-color: rgba(121,153,119,.35) !important;
+      color: var(--creme) !important;
+    }
+
+    @media (max-width: 920px) {
+      .contact-copy {
+        padding-top: 74px !important;
+      }
+
+      .contact-shell > .contact-corner-logo {
+        top: 24px !important;
+        left: 28px !important;
+        width: clamp(150px, 30vw, 210px) !important;
+      }
+
+      .contact-eyebrow {
+        top: 28px !important;
+        right: 28px !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .contact-copy {
+        padding-top: 112px !important;
+      }
+
+      .contact-shell > .contact-corner-logo {
+        top: 22px !important;
+        left: 22px !important;
+        width: 152px !important;
+      }
+
+      .contact-eyebrow {
+        top: 72px !important;
+        left: 22px !important;
+        right: auto !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 8 — LOGO ALINHADA AO TEXTO + SEM “VAMOS CRIAR”
+       ========================================================= */
+
+    /* Remove o selo/ícone “Vamos criar” só da section de contato */
+    #contato .contact-eyebrow {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+
+    /* Alinha a logo ao mesmo eixo esquerdo do título */
+    #contato .contact-copy {
+      padding-top: clamp(78px, 7vw, 106px) !important;
+    }
+
+    #contato .contact-shell > .contact-corner-logo {
+      left: clamp(22px, 3vw, 40px) !important;
+      right: auto !important;
+      top: clamp(24px, 3vw, 38px) !important;
+      width: clamp(190px, 18vw, 260px) !important;
+      transform: none !important;
+    }
+
+    @media (max-width: 920px) {
+      #contato .contact-shell > .contact-corner-logo {
+        left: 28px !important;
+        top: 24px !important;
+        width: clamp(150px, 30vw, 210px) !important;
+      }
+
+      #contato .contact-copy {
+        padding-top: 76px !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #contato .contact-shell > .contact-corner-logo {
+        left: 22px !important;
+        top: 20px !important;
+        width: 154px !important;
+      }
+
+      #contato .contact-copy {
+        padding-top: 82px !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 9 — CLIENTE SEM GLOW VAZANDO + TRANSIÇÕES SUAVES
+       ========================================================= */
+
+    /* Remove completamente o cursor/glow customizado dentro da área do cliente e modal */
+    body:has(.client-area:hover) .spotlight,
+    body:has(.client-area:hover) .cursor-outline,
+    body:has(.client-area:hover) .cursor-dot,
+    body:has(.client-area:focus-within) .spotlight,
+    body:has(.client-area:focus-within) .cursor-outline,
+    body:has(.client-area:focus-within) .cursor-dot,
+    body:has(.auth-modal.active:hover) .spotlight,
+    body:has(.auth-modal.active:hover) .cursor-outline,
+    body:has(.auth-modal.active:hover) .cursor-dot,
+    body.client-no-glow .spotlight,
+    body.client-no-glow .cursor-outline,
+    body.client-no-glow .cursor-dot {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    .client-area,
+    .client-shell,
+    .client-dashboard,
+    .client-grid,
+    .client-card,
+    .client-list,
+    .client-item,
+    .client-mini-form,
+    .client-input,
+    .client-select,
+    .client-textarea {
+      isolation: isolate !important;
+    }
+
+    /* Corta qualquer pseudo-glow interno que estava vazando visualmente */
+    .client-area *::before,
+    .client-area *::after {
+      pointer-events: none !important;
+    }
+
+    .client-card::before,
+    .client-card::after,
+    .client-item::before,
+    .client-item::after,
+    .client-mini-form::before,
+    .client-mini-form::after,
+    .client-list::before,
+    .client-list::after {
+      content: none !important;
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    /* Sombra mais controlada para não parecer que está saindo da caixa */
+    .client-card {
+      overflow: hidden !important;
+      clip-path: inset(0 round var(--kiwi-radius-lg)) !important;
+      transition:
+        transform .42s cubic-bezier(.16,.84,.28,1),
+        border-color .42s ease,
+        background .42s ease,
+        box-shadow .42s ease !important;
+      box-shadow: 0 16px 44px rgba(0,0,0,.20) !important;
+    }
+
+    .client-card:hover {
+      transform: translateY(-3px) !important;
+      background: rgba(217,216,198,.072) !important;
+      border-color: rgba(121,153,119,.34) !important;
+      box-shadow: 0 18px 46px rgba(0,0,0,.24) !important;
+    }
+
+    .client-item,
+    .favorite-btn,
+    .client-input,
+    .client-select,
+    .client-textarea,
+    .client-primary,
+    .client-ghost,
+    .client-logout {
+      transition:
+        transform .36s cubic-bezier(.16,.84,.28,1),
+        background .36s ease,
+        border-color .36s ease,
+        color .36s ease,
+        box-shadow .36s ease,
+        opacity .36s ease !important;
+    }
+
+    .client-item:hover {
+      transform: translateY(-2px) !important;
+      background: rgba(217,216,198,.07) !important;
+      border-color: rgba(217,216,198,.18) !important;
+    }
+
+    .favorite-btn:hover,
+    .favorite-btn.active {
+      transform: translateX(3px) !important;
+    }
+
+    .client-primary:hover,
+    .client-ghost:hover,
+    .client-logout:hover {
+      transform: translateY(-2px) !important;
+    }
+
+    /* Fade-in suave nas abas Entrar/Cadastrar */
+    .auth-form {
+      transform-origin: top center !important;
+      will-change: opacity, transform, filter !important;
+    }
+
+    .auth-form:not([hidden]) {
+      animation: authSoftFade .38s cubic-bezier(.16,.84,.28,1) both !important;
+    }
+
+    @keyframes authSoftFade {
+      from {
+        opacity: 0;
+        transform: translateY(10px) scale(.985);
+        filter: blur(3px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    .auth-tabs::before {
+      transition: transform .42s cubic-bezier(.16,.84,.28,1), background-position .42s ease !important;
+    }
+
+    .auth-tab {
+      transition: color .32s ease, opacity .32s ease, transform .32s ease !important;
+    }
+
+    /* Fade suave ao abrir painel / gate */
+    .client-dashboard:not([hidden]),
+    .client-gate:not([hidden]) {
+      animation: clientSoftFade .46s cubic-bezier(.16,.84,.28,1) both !important;
+    }
+
+    @keyframes clientSoftFade {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+        filter: blur(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .auth-form:not([hidden]),
+      .client-dashboard:not([hidden]),
+      .client-gate:not([hidden]) {
+        animation: none !important;
+      }
+
+      .client-card,
+      .client-item,
+      .favorite-btn,
+      .client-input,
+      .client-select,
+      .client-textarea,
+      .client-primary,
+      .client-ghost,
+      .client-logout {
+        transition: none !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 10 — LOGIN MAIS FLUIDO + CURSOR + GRID DO MODAL
+       ========================================================= */
+
+    /* Cursor volta a aparecer na área do cliente; só o glow grande fica desligado */
+    body:has(.client-area:hover) .spotlight,
+    body:has(.client-area:focus-within) .spotlight,
+    body:has(.auth-modal.active:hover) .spotlight,
+    body.client-no-glow .spotlight {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    body:has(.client-area:hover) .cursor-dot,
+    body:has(.client-area:hover) .cursor-outline,
+    body:has(.client-area:focus-within) .cursor-dot,
+    body:has(.client-area:focus-within) .cursor-outline,
+    body.client-no-glow .cursor-dot,
+    body.client-no-glow .cursor-outline {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .client-area,
+    .client-area * {
+      cursor: none !important;
+    }
+
+    /* Modal de login/cadastro com grid mais equilibrado */
+    .auth-card {
+      width: min(980px, calc(100vw - 48px)) !important;
+      min-height: min(610px, calc(100svh - 54px)) !important;
+      grid-template-columns: minmax(320px, .86fr) minmax(0, 1.14fr) !important;
+      align-items: stretch !important;
+      border-radius: 38px !important;
+    }
+
+    .auth-visual {
+      display: grid !important;
+      grid-template-rows: auto auto 1fr !important;
+      align-content: stretch !important;
+      justify-content: stretch !important;
+      gap: clamp(18px, 3vw, 28px) !important;
+      padding: clamp(30px, 4vw, 44px) !important;
+    }
+
+    .auth-orb {
+      align-self: start !important;
+      justify-self: start !important;
+      width: clamp(108px, 11vw, 148px) !important;
+      height: clamp(108px, 11vw, 148px) !important;
+    }
+
+    .auth-badge {
+      align-self: start !important;
+      justify-self: start !important;
+      margin: 0 !important;
+    }
+
+    .auth-copy {
+      align-self: end !important;
+      display: grid !important;
+      gap: 16px !important;
+      max-width: 360px !important;
+    }
+
+    .auth-copy h2 {
+      font-size: clamp(3rem, 5.1vw, 5.3rem) !important;
+      line-height: .84 !important;
+      margin: 0 !important;
+    }
+
+    .auth-copy p {
+      max-width: 340px !important;
+      line-height: 1.58 !important;
+      margin: 0 !important;
+    }
+
+    .auth-panel {
+      display: grid !important;
+      align-content: center !important;
+      padding: clamp(36px, 5vw, 58px) !important;
+      min-width: 0 !important;
+    }
+
+    .auth-tabs {
+      justify-self: center !important;
+      width: min(320px, 100%) !important;
+      margin-bottom: clamp(30px, 4vw, 44px) !important;
+    }
+
+    .auth-form {
+      width: min(520px, 100%) !important;
+      max-width: 520px !important;
+      margin: 0 auto !important;
+      gap: 16px !important;
+      transform-origin: top center !important;
+      will-change: opacity, transform, filter !important;
+    }
+
+    #loginForm {
+      grid-template-columns: 1fr !important;
+    }
+
+    #signupForm {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      column-gap: 14px !important;
+      row-gap: 15px !important;
+    }
+
+    #signupForm .auth-message,
+    #signupForm .auth-primary,
+    #signupForm .auth-helper {
+      grid-column: 1 / -1 !important;
+    }
+
+    .auth-field input,
+    .auth-field select {
+      min-height: 54px !important;
+      padding: 14px 16px !important;
+    }
+
+    .auth-primary {
+      min-height: 56px !important;
+      margin-top: 2px !important;
+    }
+
+    .auth-helper {
+      margin-top: 10px !important;
+      line-height: 1.55 !important;
+    }
+
+    /* Desliga o fade rápido antigo e usa saída/entrada mais lenta */
+    .auth-form:not([hidden]) {
+      animation: none !important;
+    }
+
+    .auth-form.auth-form-leave {
+      display: grid !important;
+      pointer-events: none !important;
+      animation: authSlowLeave .34s cubic-bezier(.4,0,.2,1) both !important;
+    }
+
+    .auth-form.auth-form-enter {
+      opacity: 0 !important;
+      transform: translateY(16px) scale(.985) !important;
+      filter: blur(5px) !important;
+      pointer-events: none !important;
+    }
+
+    .auth-form.auth-form-enter.auth-form-enter-active {
+      animation: authSlowEnter .72s cubic-bezier(.16,.84,.28,1) both !important;
+    }
+
+    @keyframes authSlowLeave {
+      from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-10px) scale(.986);
+        filter: blur(4px);
+      }
+    }
+
+    @keyframes authSlowEnter {
+      0% {
+        opacity: 0;
+        transform: translateY(18px) scale(.982);
+        filter: blur(6px);
+      }
+      58% {
+        opacity: 1;
+        filter: blur(0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+        pointer-events: auto;
+      }
+    }
+
+    .auth-tabs::before {
+      transition:
+        transform .62s cubic-bezier(.16,.84,.28,1),
+        background-position .62s ease,
+        box-shadow .62s ease !important;
+    }
+
+    .auth-tab {
+      transition:
+        color .48s ease,
+        opacity .48s ease,
+        transform .48s cubic-bezier(.16,.84,.28,1) !important;
+    }
+
+    /* Hover do painel continua suave, sem vazamento visual */
+    .client-card,
+    .client-item,
+    .favorite-btn {
+      transition:
+        transform .48s cubic-bezier(.16,.84,.28,1),
+        background .48s ease,
+        border-color .48s ease,
+        box-shadow .48s ease !important;
+    }
+
+    .client-card:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 14px 38px rgba(0,0,0,.20) !important;
+    }
+
+    @media (max-width: 920px) {
+      .auth-card {
+        grid-template-columns: 1fr !important;
+        width: min(680px, calc(100vw - 28px)) !important;
+        min-height: auto !important;
+        max-height: calc(100svh - 28px) !important;
+        overflow: auto !important;
+      }
+
+      .auth-visual {
+        min-height: auto !important;
+        grid-template-columns: auto 1fr !important;
+        grid-template-rows: auto auto !important;
+        align-items: center !important;
+        padding: 26px !important;
+      }
+
+      .auth-orb {
+        grid-row: 1 / span 2 !important;
+        width: 96px !important;
+        height: 96px !important;
+      }
+
+      .auth-badge {
+        grid-column: 2 !important;
+      }
+
+      .auth-copy {
+        grid-column: 2 !important;
+        align-self: start !important;
+        max-width: none !important;
+      }
+
+      .auth-copy h2 {
+        font-size: clamp(2.3rem, 8vw, 3.4rem) !important;
+      }
+
+      .auth-panel {
+        padding: 28px !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #signupForm {
+        grid-template-columns: 1fr !important;
+      }
+
+      .auth-visual {
+        grid-template-columns: 1fr !important;
+        text-align: left !important;
+      }
+
+      .auth-orb {
+        grid-row: auto !important;
+      }
+
+      .auth-badge,
+      .auth-copy {
+        grid-column: auto !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 11 — ABAS SEM TELA CINZA / ENTRADA IMEDIATA
+       ========================================================= */
+
+    .auth-panel {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .auth-form {
+      transition: none !important;
+      will-change: opacity, transform, filter !important;
+    }
+
+    .auth-form.auth-form-leave {
+      position: absolute !important;
+      left: 50% !important;
+      top: var(--auth-form-top, 148px) !important;
+      width: min(520px, calc(100% - 72px)) !important;
+      max-width: 520px !important;
+      margin: 0 !important;
+      transform: translateX(-50%) !important;
+      pointer-events: none !important;
+      animation: authQuickLeave .22s cubic-bezier(.4,0,.2,1) both !important;
+      z-index: 1 !important;
+    }
+
+    .auth-form.auth-form-enter {
+      opacity: 0 !important;
+      transform: translateY(10px) scale(.99) !important;
+      filter: blur(3px) !important;
+      animation: authInstantEnter .52s cubic-bezier(.16,.84,.28,1) both !important;
+      z-index: 2 !important;
+    }
+
+    @keyframes authQuickLeave {
+      from {
+        opacity: 1;
+        filter: blur(0);
+      }
+      to {
+        opacity: 0;
+        filter: blur(2px);
+      }
+    }
+
+    @keyframes authInstantEnter {
+      0% {
+        opacity: 0;
+        transform: translateY(10px) scale(.99);
+        filter: blur(3px);
+      }
+      38% {
+        opacity: 1;
+        filter: blur(0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @media (max-width: 920px) {
+      .auth-form.auth-form-leave {
+        top: var(--auth-form-top, 132px) !important;
+        width: min(520px, calc(100% - 56px)) !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 12 — TROCA IMEDIATA DAS ABAS + FORMS MAIS BONITOS
+       ========================================================= */
+
+    .auth-form[hidden] {
+      display: none !important;
+    }
+
+    .auth-form {
+      position: relative !important;
+      width: min(540px, 100%) !important;
+      max-width: 540px !important;
+      margin: 0 auto !important;
+      padding: 18px !important;
+      border-radius: 28px !important;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
+        rgba(14,14,13,.22) !important;
+      border: 1px solid rgba(217,216,198,.10) !important;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.03) !important;
+      backdrop-filter: blur(8px) !important;
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+      animation: none !important;
+    }
+
+    .auth-form .auth-field {
+      position: relative !important;
+    }
+
+    .auth-form .auth-field label {
+      display: inline-block !important;
+      margin-bottom: 8px !important;
+      color: rgba(217,216,198,.82) !important;
+      font-size: .78rem !important;
+      font-weight: 900 !important;
+      letter-spacing: .02em !important;
+      text-transform: uppercase !important;
+    }
+
+    .auth-field input,
+    .auth-field select {
+      min-height: 58px !important;
+      padding: 16px 18px !important;
+      border-radius: 18px !important;
+      border: 1px solid rgba(217,216,198,.16) !important;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.015), rgba(255,255,255,0)),
+        rgba(0,0,0,.34) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.03),
+        0 10px 24px rgba(0,0,0,.10) !important;
+      transition:
+        border-color .28s ease,
+        box-shadow .28s ease,
+        background .28s ease,
+        transform .28s ease !important;
+    }
+
+    .auth-field input::placeholder,
+    .auth-field select {
+      color: rgba(217,216,198,.52) !important;
+    }
+
+    .auth-field input:focus,
+    .auth-field select:focus {
+      border-color: rgba(121,153,119,.82) !important;
+      background: rgba(0,0,0,.42) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04),
+        0 0 0 4px rgba(121,153,119,.10),
+        0 14px 30px rgba(0,0,0,.16) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .auth-primary {
+      min-height: 58px !important;
+      border-radius: 999px !important;
+      background: var(--verde-claro) !important;
+      color: var(--preto) !important;
+      box-shadow:
+        0 16px 34px rgba(121,153,119,.14),
+        inset 0 1px 0 rgba(255,255,255,.18) !important;
+      letter-spacing: -.02em !important;
+      font-size: 1rem !important;
+      font-weight: 1000 !important;
+      transition:
+        transform .34s cubic-bezier(.16,.84,.28,1),
+        box-shadow .34s ease,
+        background .34s ease !important;
+    }
+
+    .auth-primary:hover {
+      transform: translateY(-2px) !important;
+      background: var(--creme) !important;
+      box-shadow:
+        0 20px 38px rgba(121,153,119,.18),
+        inset 0 1px 0 rgba(255,255,255,.22) !important;
+    }
+
+    .auth-helper {
+      margin-top: 8px !important;
+      padding: 14px 16px !important;
+      border-radius: 18px !important;
+      background: rgba(217,216,198,.05) !important;
+      border: 1px solid rgba(217,216,198,.09) !important;
+      color: rgba(217,216,198,.68) !important;
+      font-size: .9rem !important;
+      line-height: 1.55 !important;
+    }
+
+    .auth-message {
+      min-height: 0 !important;
+      margin-bottom: 2px !important;
+      padding: 10px 12px !important;
+      border-radius: 14px !important;
+      background: rgba(121,153,119,.10) !important;
+      border: 1px solid rgba(121,153,119,.18) !important;
+      color: var(--verde-claro) !important;
+      font-size: .85rem !important;
+      font-weight: 900 !important;
+    }
+
+    .auth-message:empty {
+      display: none !important;
+    }
+
+    .auth-form.auth-form-enhance .auth-message,
+    .auth-form.auth-form-enhance .auth-field,
+    .auth-form.auth-form-enhance .auth-primary,
+    .auth-form.auth-form-enhance .auth-helper {
+      opacity: 0;
+      transform: translateY(14px);
+      filter: blur(3px);
+      animation: authFieldRise .74s cubic-bezier(.16,.84,.28,1) forwards;
+    }
+
+    .auth-form.auth-form-enhance .auth-message { animation-delay: .02s; }
+    .auth-form.auth-form-enhance .auth-field:nth-of-type(1) { animation-delay: .05s; }
+    .auth-form.auth-form-enhance .auth-field:nth-of-type(2) { animation-delay: .11s; }
+    .auth-form.auth-form-enhance .auth-field:nth-of-type(3) { animation-delay: .17s; }
+    .auth-form.auth-form-enhance .auth-field:nth-of-type(4) { animation-delay: .23s; }
+    .auth-form.auth-form-enhance .auth-primary { animation-delay: .28s; }
+    .auth-form.auth-form-enhance .auth-helper { animation-delay: .34s; }
+
+    @keyframes authFieldRise {
+      0% {
+        opacity: 0;
+        transform: translateY(14px);
+        filter: blur(3px);
+      }
+      55% {
+        opacity: 1;
+        filter: blur(0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .auth-form {
+        padding: 14px !important;
+        border-radius: 22px !important;
+      }
+
+      .auth-field input,
+      .auth-field select {
+        min-height: 54px !important;
+        border-radius: 16px !important;
+      }
+
+      .auth-helper {
+        font-size: .88rem !important;
+      }
+    }
+
+
+
+    /* =========================================================
+       AJUSTE FINAL 13 — MODAL SEM CINZA E UMA ABA ATIVA POR VEZ
+       ========================================================= */
+
+    .auth-tabs .auth-tab {
+      background: transparent !important;
+      color: rgba(217,216,198,.72) !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    .auth-tabs .auth-tab.active {
+      color: var(--preto) !important;
+      font-weight: 1000 !important;
+    }
+
+    .auth-tabs:not(.is-signup)::before {
+      transform: translateX(0) !important;
+    }
+
+    .auth-tabs.is-signup::before {
+      transform: translateX(calc(100% + 4px)) !important;
+    }
+
+    .auth-form[hidden] {
+      display: none !important;
+    }
+
+    .auth-form {
+      opacity: 1 !important;
+      visibility: visible !important;
+      filter: none !important;
+    }
+
+    .auth-form.auth-form-enhance {
+      animation: authWholeFormIn .62s cubic-bezier(.16,.84,.28,1) both !important;
+    }
+
+    .auth-form.auth-form-enhance .auth-message,
+    .auth-form.auth-form-enhance .auth-field,
+    .auth-form.auth-form-enhance .auth-primary,
+    .auth-form.auth-form-enhance .auth-helper {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      filter: none !important;
+      animation: none !important;
+    }
+
+    @keyframes authWholeFormIn {
+      0% {
+        opacity: .82;
+        transform: translateY(10px) scale(.992);
+        filter: blur(2px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    .auth-modal.active .auth-panel {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(121,153,119,.08), transparent 30%),
+        transparent !important;
+    }
+
 </style>
 </head>
 
@@ -5276,7 +8413,7 @@ Mensagem: ${data.mensagem}`;
       feedbackMessage.textContent = message;
 
       if (feedbackClose) {
-        feedbackClose.textContent = "Voltar para o início";
+        feedbackClose.textContent = "Voltar para área do cliente";
         feedbackClose.onclick = goToStartFromFeedback;
       }
     }
@@ -5469,5 +8606,386 @@ Mensagem: ${data.mensagem}`;
     });
 
   </script>
+
+
+  <script>
+    /* Marca Kiwi nos cards de serviços + controle fino da luz do cursor */
+    (() => {
+      const heroLogo = document.querySelector('.hero-logo-card img');
+      const logoSrc = heroLogo ? heroLogo.getAttribute('src') : '';
+
+      if (logoSrc) {
+        document.querySelectorAll('.flip-front').forEach((card) => {
+          if (!card.querySelector('.service-logo-mark')) {
+            const img = document.createElement('img');
+            img.className = 'service-logo-mark';
+            img.src = logoSrc;
+            img.alt = '';
+            img.setAttribute('aria-hidden', 'true');
+            card.appendChild(img);
+          }
+        });
+      }
+
+      const noGlowTargets = document.querySelectorAll('input, textarea, select, .briefing-form, .client-area, .client-area *, .client-card, .client-item, .client-list, .client-mini-form, .auth-card');
+      noGlowTargets.forEach((item) => {
+        item.addEventListener('mouseenter', () => document.body.classList.add('no-cursor-glow'));
+        item.addEventListener('mouseleave', () => document.body.classList.remove('no-cursor-glow'));
+        item.addEventListener('focusin', () => document.body.classList.add('no-cursor-glow'));
+        item.addEventListener('focusout', () => document.body.classList.remove('no-cursor-glow'));
+      });
+    })();
+  </script>
+
+
+
+  <script>
+    /* Logo Kiwi acima do formulário, alinhada ao grid da section de contato */
+    (() => {
+      const navLogo = document.querySelector('.brand-logo');
+      const contactShell = document.querySelector('.contact-shell');
+      const briefingForm = document.querySelector('.briefing-form');
+      if (navLogo && contactShell) {
+        let img = contactShell.querySelector(':scope > .contact-corner-logo') || document.querySelector('.briefing-form .contact-corner-logo');
+        if (!img) {
+          img = document.createElement('img');
+          img.className = 'contact-corner-logo';
+          img.src = navLogo.getAttribute('src');
+          img.alt = 'Logo Kiwi Design';
+        }
+        contactShell.appendChild(img);
+      }
+      if (briefingForm) {
+        briefingForm.style.position = 'relative';
+      }
+    })();
+  </script>
+
+
+
+  <script>
+    /* Suaviza troca de abas e desliga o glow dentro da área do cliente */
+    (() => {
+      const body = document.body;
+
+      const clientArea = document.querySelector('.client-area');
+      const authModal = document.querySelector('.auth-modal');
+
+      [clientArea, authModal].forEach((zone) => {
+        if (!zone) return;
+        zone.addEventListener('mouseenter', () => body.classList.add('client-no-glow'));
+        zone.addEventListener('mouseleave', () => body.classList.remove('client-no-glow'));
+        zone.addEventListener('focusin', () => body.classList.add('client-no-glow'));
+        zone.addEventListener('focusout', () => body.classList.remove('client-no-glow'));
+      });
+
+      const authForms = {
+        login: document.getElementById('loginForm'),
+        signup: document.getElementById('signupForm')
+      };
+
+      document.querySelectorAll('[data-auth-tab]').forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const mode = tab.dataset.authTab;
+          const form = authForms[mode];
+          if (!form) return;
+
+          form.style.animation = 'none';
+          void form.offsetHeight;
+          form.style.animation = '';
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    /* Troca de abas fluida, sem atraso/estado cinza vazio */
+    (() => {
+      const body = document.body;
+      const clientArea = document.querySelector('.client-area');
+      const authModal = document.querySelector('.auth-modal');
+
+      [clientArea, authModal].forEach((zone) => {
+        if (!zone) return;
+        zone.addEventListener('mouseenter', () => body.classList.add('client-no-glow'));
+        zone.addEventListener('mouseleave', () => body.classList.remove('client-no-glow'));
+        zone.addEventListener('focusin', () => body.classList.add('client-no-glow'));
+        zone.addEventListener('focusout', () => body.classList.remove('client-no-glow'));
+      });
+
+      const forms = {
+        login: document.getElementById('loginForm'),
+        signup: document.getElementById('signupForm')
+      };
+
+      const messages = {
+        login: document.getElementById('loginMessage'),
+        signup: document.getElementById('signupMessage')
+      };
+
+      const tabs = Array.from(document.querySelectorAll('[data-auth-tab]'));
+      const authTabs = document.querySelector('.auth-tabs');
+      const authPanel = document.querySelector('.auth-panel');
+
+      let currentMode = forms.signup && !forms.signup.hidden ? 'signup' : 'login';
+      let switchTimer = null;
+
+      function setTabUI(mode) {
+        tabs.forEach((tab) => {
+          tab.classList.toggle('active', tab.dataset.authTab === mode);
+        });
+        if (authTabs) {
+          authTabs.classList.toggle('is-signup', mode === 'signup');
+        }
+      }
+
+      function clearFormMotion(form) {
+        if (!form) return;
+        form.classList.remove('auth-form-leave', 'auth-form-enter');
+        form.style.removeProperty('--auth-form-top');
+      }
+
+      function smoothSwitchAuthTab(mode) {
+        if (!forms[mode]) return;
+
+        if (messages.login) messages.login.textContent = '';
+        if (messages.signup) messages.signup.textContent = '';
+        setTabUI(mode);
+
+        const from = forms[currentMode];
+        const to = forms[mode];
+
+        clearTimeout(switchTimer);
+
+        Object.values(forms).forEach((form) => {
+          if (form) clearFormMotion(form);
+        });
+
+        if (!from || from === to || from.hidden) {
+          Object.entries(forms).forEach(([key, form]) => {
+            if (!form) return;
+            form.hidden = key !== mode;
+          });
+          const activeForm = forms[mode];
+          if (activeForm) {
+            activeForm.classList.add('auth-form-enter');
+            switchTimer = setTimeout(() => activeForm.classList.remove('auth-form-enter'), 540);
+          }
+          currentMode = mode;
+          return;
+        }
+
+        const panelRect = authPanel ? authPanel.getBoundingClientRect() : null;
+        const fromRect = from.getBoundingClientRect();
+        if (panelRect) {
+          from.style.setProperty('--auth-form-top', `${Math.max(0, fromRect.top - panelRect.top)}px`);
+        }
+
+        /* Mostra o novo formulário imediatamente para não ficar cinza/vazio */
+        to.hidden = false;
+        to.classList.add('auth-form-enter');
+
+        from.classList.add('auth-form-leave');
+
+        switchTimer = setTimeout(() => {
+          from.hidden = true;
+          clearFormMotion(from);
+          to.classList.remove('auth-form-enter');
+          currentMode = mode;
+        }, 540);
+      }
+
+      try {
+        window.switchAuthTab = smoothSwitchAuthTab;
+        switchAuthTab = smoothSwitchAuthTab;
+      } catch (error) {
+        window.switchAuthTab = smoothSwitchAuthTab;
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          smoothSwitchAuthTab(tab.dataset.authTab);
+        }, true);
+      });
+    })();
+  </script>
+
+
+  <script>
+    /* Tabs de login/cadastro com troca imediata e animação começando na hora */
+    (() => {
+      const authTabsWrap = document.querySelector('.auth-tabs');
+      const oldTabs = Array.from(document.querySelectorAll('[data-auth-tab]'));
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const loginMessage = document.getElementById('loginMessage');
+      const signupMessage = document.getElementById('signupMessage');
+
+      if (!authTabsWrap || !loginForm || !signupForm || oldTabs.length === 0) return;
+
+      const currentModeFromState = () => (!signupForm.hidden ? 'signup' : 'login');
+
+      function setVisualState(mode) {
+        authTabsWrap.classList.toggle('is-signup', mode === 'signup');
+        authTabsWrap.querySelectorAll('[data-auth-tab]').forEach((tab) => {
+          tab.classList.toggle('active', tab.dataset.authTab === mode);
+        });
+      }
+
+      function clearMessages() {
+        if (loginMessage) loginMessage.textContent = '';
+        if (signupMessage) signupMessage.textContent = '';
+      }
+
+      function restartFormAnimation(form) {
+        form.classList.remove('auth-form-enhance');
+        void form.offsetWidth;
+        form.classList.add('auth-form-enhance');
+        window.setTimeout(() => form.classList.remove('auth-form-enhance'), 920);
+      }
+
+      function instantSwitch(mode) {
+        const currentMode = currentModeFromState();
+
+        clearMessages();
+        setVisualState(mode);
+
+        const target = mode === 'login' ? loginForm : signupForm;
+        const other = mode === 'login' ? signupForm : loginForm;
+
+        other.hidden = true;
+        other.classList.remove('auth-form-enhance');
+
+        target.hidden = false;
+        restartFormAnimation(target);
+      }
+
+      oldTabs.forEach((tab) => {
+        const clone = tab.cloneNode(true);
+        clone.addEventListener('click', (event) => {
+          event.preventDefault();
+          instantSwitch(clone.dataset.authTab);
+        });
+        tab.replaceWith(clone);
+      });
+
+      setVisualState(currentModeFromState());
+    })();
+  </script>
+
+
+
+  <script>
+    /* Corrige abertura do modal: sem tela cinza e sem duas abas selecionadas */
+    (() => {
+      const body = document.body;
+      const authModal = document.getElementById('authModal');
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const loginMessage = document.getElementById('loginMessage');
+      const signupMessage = document.getElementById('signupMessage');
+      const authTabsWrap = document.querySelector('.auth-tabs');
+      const authOpenBtn = document.getElementById('authOpenBtn');
+
+      if (!authModal || !loginForm || !signupForm || !authTabsWrap) return;
+
+      function tabs() {
+        return Array.from(document.querySelectorAll('[data-auth-tab]'));
+      }
+
+      function setOnlyActive(mode) {
+        tabs().forEach((tab) => {
+          const isActive = tab.dataset.authTab === mode;
+          tab.classList.toggle('active', isActive);
+          tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        authTabsWrap.classList.toggle('is-signup', mode === 'signup');
+      }
+
+      function restartCleanAnimation(form) {
+        if (!form) return;
+        form.classList.remove('auth-form-enhance');
+        void form.offsetWidth;
+        form.classList.add('auth-form-enhance');
+        window.setTimeout(() => form.classList.remove('auth-form-enhance'), 680);
+      }
+
+      function showAuthMode(mode = 'login', message = '', animate = true) {
+        const normalized = mode === 'signup' ? 'signup' : 'login';
+
+        setOnlyActive(normalized);
+
+        if (loginMessage) loginMessage.textContent = '';
+        if (signupMessage) signupMessage.textContent = '';
+
+        loginForm.hidden = normalized !== 'login';
+        signupForm.hidden = normalized !== 'signup';
+
+        const activeForm = normalized === 'login' ? loginForm : signupForm;
+
+        if (message) {
+          const activeMessage = normalized === 'login' ? loginMessage : signupMessage;
+          if (activeMessage) activeMessage.textContent = message;
+        }
+
+        if (animate) restartCleanAnimation(activeForm);
+      }
+
+      function openAuthFixed(mode = 'login', message = '') {
+        showAuthMode(mode, message, false);
+        authModal.classList.add('active');
+        authModal.setAttribute('aria-hidden', 'false');
+        body.classList.add('auth-lock');
+
+        requestAnimationFrame(() => {
+          const activeForm = mode === 'signup' ? signupForm : loginForm;
+          restartCleanAnimation(activeForm);
+        });
+      }
+
+      try {
+        window.switchAuthTab = (mode) => showAuthMode(mode, '', true);
+        switchAuthTab = window.switchAuthTab;
+      } catch (error) {
+        window.switchAuthTab = (mode) => showAuthMode(mode, '', true);
+      }
+
+      try {
+        window.openAuth = openAuthFixed;
+        openAuth = openAuthFixed;
+      } catch (error) {
+        window.openAuth = openAuthFixed;
+      }
+
+      tabs().forEach((tab) => {
+        const clone = tab.cloneNode(true);
+        clone.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          showAuthMode(clone.dataset.authTab, '', true);
+        }, true);
+        tab.replaceWith(clone);
+      });
+
+      /* garante um estado limpo já no carregamento */
+      showAuthMode(signupForm.hidden ? 'login' : 'signup', '', false);
+
+      if (authOpenBtn) {
+        const cleanBtn = authOpenBtn.cloneNode(true);
+        cleanBtn.addEventListener('click', (event) => {
+          event.preventDefault();
+          if (typeof getCurrentUser === 'function' && getCurrentUser()) {
+            document.getElementById('painel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            openAuthFixed('login');
+          }
+        });
+        authOpenBtn.replaceWith(cleanBtn);
+      }
+    })();
+  </script>
+
 </body>
 </html>
